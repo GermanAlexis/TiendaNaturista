@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
 {
     class Conexion
     {
-     
+
         SqlConnection Con = new SqlConnection("Data Source = .; Initial Catalog = TiendaNaturista; Integrated Security = true");
 
         public void Conectar()
