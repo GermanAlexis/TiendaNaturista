@@ -41,9 +41,9 @@
             this.button1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Blue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(92, 77);
+            this.button1.Location = new System.Drawing.Point(92, 68);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 88);
+            this.button1.Size = new System.Drawing.Size(118, 97);
             this.button1.TabIndex = 0;
             this.button1.Text = "Clientes";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -56,9 +56,9 @@
             this.button2.ForeColor = System.Drawing.Color.Lime;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(347, 77);
+            this.button2.Location = new System.Drawing.Point(347, 68);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 88);
+            this.button2.Size = new System.Drawing.Size(106, 97);
             this.button2.TabIndex = 1;
             this.button2.Text = "Productos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -69,22 +69,25 @@
             this.button3.BackColor = System.Drawing.Color.LightSalmon;
             this.button3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(92, 225);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 76);
+            this.button3.Size = new System.Drawing.Size(118, 103);
             this.button3.TabIndex = 2;
             this.button3.Text = "Factura";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightSalmon;
             this.button4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Lime;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(347, 225);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 76);
+            this.button4.Size = new System.Drawing.Size(106, 103);
             this.button4.TabIndex = 3;
             this.button4.Text = "Inventario";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

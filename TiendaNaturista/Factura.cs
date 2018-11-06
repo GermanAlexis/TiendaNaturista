@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TiendaNaturista
 {
-    public partial class Menu : Form
+    public partial class Factura : Form
     {
-        public Menu()
+        public Factura()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form invoice = new Factura();
-            invoice.Show();
         }
     }
 }
