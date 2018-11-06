@@ -94,6 +94,7 @@
             this.IngresarLogin.TabIndex = 3;
             this.IngresarLogin.Text = "Ingresar";
             this.IngresarLogin.UseVisualStyleBackColor = true;
+            this.IngresarLogin.Click += new System.EventHandler(this.IngresarLogin_Click);
             // 
             // Login
             // 
