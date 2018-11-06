@@ -21,10 +21,8 @@ namespace TiendaNaturista
 
         private void IngresarLogin_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             Form Menu = new Menu();
             Menu.Show();
-=======
             string user = User.Text;
             string pass = Passwork.Text;
 
@@ -63,7 +61,6 @@ namespace TiendaNaturista
             {
                 MessageBox.Show(ex.Message);
             }
->>>>>>> 0db089f0433deb13f36f6ecfe844936bf3f94b7b
         }
     }
 }
