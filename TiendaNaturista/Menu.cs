@@ -22,5 +22,11 @@ namespace TiendaNaturista
             Form invoice = new Factura();
             invoice.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Client = new Cliente();
+            Client.Show();
+        }
     }
 }
