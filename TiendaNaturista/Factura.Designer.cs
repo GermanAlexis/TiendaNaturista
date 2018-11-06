@@ -47,16 +47,16 @@
             // 
             // CodeFact
             // 
-            this.CodeFact.Location = new System.Drawing.Point(101, 46);
-            this.CodeFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CodeFact.Location = new System.Drawing.Point(121, 46);
+            this.CodeFact.Margin = new System.Windows.Forms.Padding(4);
             this.CodeFact.Name = "CodeFact";
             this.CodeFact.Size = new System.Drawing.Size(148, 25);
             this.CodeFact.TabIndex = 0;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(101, 286);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(121, 279);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(148, 25);
             this.textBox4.TabIndex = 3;
@@ -64,7 +64,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(624, 39);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(298, 25);
             this.dateTimePicker1.TabIndex = 4;
@@ -72,7 +72,7 @@
             // AddProduc
             // 
             this.AddProduc.Location = new System.Drawing.Point(748, 99);
-            this.AddProduc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddProduc.Margin = new System.Windows.Forms.Padding(4);
             this.AddProduc.Name = "AddProduc";
             this.AddProduc.Size = new System.Drawing.Size(174, 42);
             this.AddProduc.TabIndex = 5;
@@ -82,7 +82,7 @@
             // listView1
             // 
             this.listView1.Location = new System.Drawing.Point(510, 160);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(412, 151);
             this.listView1.TabIndex = 6;
@@ -91,7 +91,7 @@
             // ValorTotalFact
             // 
             this.ValorTotalFact.Location = new System.Drawing.Point(698, 350);
-            this.ValorTotalFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ValorTotalFact.Margin = new System.Windows.Forms.Padding(4);
             this.ValorTotalFact.Name = "ValorTotalFact";
             this.ValorTotalFact.Size = new System.Drawing.Size(224, 25);
             this.ValorTotalFact.TabIndex = 7;
@@ -99,7 +99,7 @@
             // TerminarFact
             // 
             this.TerminarFact.Location = new System.Drawing.Point(166, 342);
-            this.TerminarFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TerminarFact.Margin = new System.Windows.Forms.Padding(4);
             this.TerminarFact.Name = "TerminarFact";
             this.TerminarFact.Size = new System.Drawing.Size(190, 40);
             this.TerminarFact.TabIndex = 8;
@@ -108,8 +108,8 @@
             // 
             // listClientFac
             // 
-            this.listClientFac.Location = new System.Drawing.Point(101, 113);
-            this.listClientFac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listClientFac.Location = new System.Drawing.Point(121, 111);
+            this.listClientFac.Margin = new System.Windows.Forms.Padding(4);
             this.listClientFac.Name = "listClientFac";
             this.listClientFac.Size = new System.Drawing.Size(380, 30);
             this.listClientFac.TabIndex = 9;
@@ -117,8 +117,8 @@
             // 
             // listProducFact
             // 
-            this.listProducFact.Location = new System.Drawing.Point(101, 205);
-            this.listProducFact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listProducFact.Location = new System.Drawing.Point(121, 192);
+            this.listProducFact.Margin = new System.Windows.Forms.Padding(4);
             this.listProducFact.Name = "listProducFact";
             this.listProducFact.Size = new System.Drawing.Size(264, 31);
             this.listProducFact.TabIndex = 10;
@@ -181,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(491, 46);
+            this.label6.Location = new System.Drawing.Point(507, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 16;
@@ -208,7 +208,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.CodeFact);
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Factura";
             this.Text = "Factura";
             this.ResumeLayout(false);
