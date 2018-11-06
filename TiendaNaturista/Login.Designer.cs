@@ -62,15 +62,16 @@
             this.User.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(164, 26);
-            this.User.TabIndex = 2;
+            this.User.TabIndex = 1;
             // 
             // Passwork
             // 
             this.Passwork.Location = new System.Drawing.Point(124, 191);
             this.Passwork.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Passwork.Name = "Passwork";
+            this.Passwork.PasswordChar = '*';
             this.Passwork.Size = new System.Drawing.Size(164, 26);
-            this.Passwork.TabIndex = 3;
+            this.Passwork.TabIndex = 2;
             // 
             // label3
             // 
@@ -90,7 +91,7 @@
             this.IngresarLogin.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.IngresarLogin.Name = "IngresarLogin";
             this.IngresarLogin.Size = new System.Drawing.Size(125, 32);
-            this.IngresarLogin.TabIndex = 5;
+            this.IngresarLogin.TabIndex = 3;
             this.IngresarLogin.Text = "Ingresar";
             this.IngresarLogin.UseVisualStyleBackColor = true;
             // 
@@ -99,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(450, 327);
+            this.ClientSize = new System.Drawing.Size(417, 340);
             this.Controls.Add(this.IngresarLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Passwork);
@@ -109,6 +110,8 @@
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.OrangeRed;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
