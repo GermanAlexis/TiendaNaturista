@@ -16,5 +16,17 @@ namespace TiendaNaturista
         {
             InitializeComponent();
         }
+
+        private void SaveProduc_Click(object sender, EventArgs e)
+        {
+            string CodigoProducto = CodeProduc.Text;
+            string DescripcionProducto = DescriProdc.Text;
+            string ValorProducto = ValorProduc.Text;
+            string CantidadProducto = CantidadProduc.Text;
+
+            Logica.LogicaProductos LP = new Logica.LogicaProductos();
+
+            LP.InsertarProducto(CodigoProducto, DescripcionProducto, ValorProducto, CantidadProducto);
+        }
     }
 }
