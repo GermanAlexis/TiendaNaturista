@@ -54,6 +54,9 @@ namespace TiendaNaturista
                 else
                 {
                     MessageBox.Show("No existe ningun usuario registrado");
+                    User.Text = "";
+                    Passwork.Text = "";
+                    User.Focus();                    
                 }
 
             }
