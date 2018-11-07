@@ -50,6 +50,7 @@ namespace TiendaNaturista
                     this.Hide();
                     Menu MP = new Menu();
                     MP.Show();
+
                 }
                 else
                 {
@@ -60,6 +61,14 @@ namespace TiendaNaturista
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Passwork_TextChanged(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                IngresarLogin.PerformClick();
             }
         }
     }
