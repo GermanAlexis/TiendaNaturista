@@ -29,7 +29,8 @@ namespace TiendaNaturista
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Vendedor where Ven_User=@user and Ven_Password=@password", Con.Conex());
+                string sql = "SELECT * FROM Vendedor where Ven_User=@user and Ven_Password=@password";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
 
                 cmd.Parameters.AddWithValue("@user", user);
                 cmd.Parameters.AddWithValue("@password", pass);
@@ -53,12 +54,23 @@ namespace TiendaNaturista
                 else
                 {
                     MessageBox.Show("No existe ningun usuario registrado");
+                    User.Text = "";
+                    Passwork.Text = "";
+                    User.Focus();                    
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Passwork_TextChanged(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                IngresarLogin.PerformClick();
             }
         }
     }

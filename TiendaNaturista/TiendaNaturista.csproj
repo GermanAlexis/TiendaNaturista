@@ -59,6 +59,7 @@
     <Compile Include="Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\LogicaProductos.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

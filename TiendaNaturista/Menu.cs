@@ -28,5 +28,11 @@ namespace TiendaNaturista
             Form Client = new Cliente();
             Client.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Productos Product = new Productos();
+            Product.Show();
+        }
     }
 }
