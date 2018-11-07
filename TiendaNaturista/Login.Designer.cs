@@ -83,7 +83,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 36);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Tienda Naturista\r\nNaturVida";
+            this.label3.Text = "Tienda Naturista\r\n      NaturVida";
             // 
             // IngresarLogin
             // 
