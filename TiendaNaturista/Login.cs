@@ -21,8 +21,6 @@ namespace TiendaNaturista
 
         private void IngresarLogin_Click(object sender, EventArgs e)
         {
-            Form Menu = new Menu();
-            Menu.Show();
             string user = User.Text;
             string pass = Passwork.Text;
 
@@ -55,6 +53,9 @@ namespace TiendaNaturista
                 else
                 {
                     MessageBox.Show("No existe ningun usuario registrado");
+                    User.Text = "";
+                    Passwork.Text = "";
+                    User.Focus();                    
                 }
 
             }
