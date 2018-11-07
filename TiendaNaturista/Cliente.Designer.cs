@@ -31,6 +31,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarCliente = new System.Windows.Forms.TabPage();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.correo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,24 +44,22 @@
             this.NameClient = new System.Windows.Forms.TextBox();
             this.Document = new System.Windows.Forms.TextBox();
             this.ConsultarCliente = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.correo = new System.Windows.Forms.Label();
-            this.Email = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.DocumentConsulta = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DocumentoModificar = new System.Windows.Forms.TextBox();
-            this.Consultar_Modificar_Cliente = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Guardar_Modificar_Cliente = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.DocumentConsulta = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Guardar_Modificar_Cliente = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Consultar_Modificar_Cliente = new System.Windows.Forms.Button();
+            this.DocumentoModificar = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarCliente.SuspendLayout();
             this.ConsultarCliente.SuspendLayout();
@@ -110,6 +110,22 @@
             this.IngresarCliente.Size = new System.Drawing.Size(499, 287);
             this.IngresarCliente.TabIndex = 0;
             this.IngresarCliente.Text = "Ingresar Cliente";
+            // 
+            // Email
+            // 
+            this.Email.Location = new System.Drawing.Point(138, 246);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(144, 25);
+            this.Email.TabIndex = 11;
+            // 
+            // correo
+            // 
+            this.correo.AutoSize = true;
+            this.correo.Location = new System.Drawing.Point(34, 246);
+            this.correo.Name = "correo";
+            this.correo.Size = new System.Drawing.Size(55, 18);
+            this.correo.TabIndex = 10;
+            this.correo.Text = "Correo";
             // 
             // label4
             // 
@@ -164,6 +180,7 @@
             this.SaveClient.TabIndex = 4;
             this.SaveClient.Text = "Guardar Cliente";
             this.SaveClient.UseVisualStyleBackColor = true;
+            this.SaveClient.Click += new System.EventHandler(this.SaveClient_Click);
             // 
             // PhoneClient
             // 
@@ -206,6 +223,30 @@
             this.ConsultarCliente.TabIndex = 1;
             this.ConsultarCliente.Text = "Consultar Cliente";
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(59, 123);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(362, 140);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // DocumentConsulta
+            // 
+            this.DocumentConsulta.Location = new System.Drawing.Point(257, 31);
+            this.DocumentConsulta.Name = "DocumentConsulta";
+            this.DocumentConsulta.Size = new System.Drawing.Size(164, 25);
+            this.DocumentConsulta.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 18);
+            this.label6.TabIndex = 0;
+            this.label6.Text = " Documento del Cliente";
+            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -228,118 +269,21 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Modificar Cliente";
             // 
-            // correo
+            // label11
             // 
-            this.correo.AutoSize = true;
-            this.correo.Location = new System.Drawing.Point(34, 246);
-            this.correo.Name = "correo";
-            this.correo.Size = new System.Drawing.Size(55, 18);
-            this.correo.TabIndex = 10;
-            this.correo.Text = "Correo";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(85, 254);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 18);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Correo";
             // 
-            // Email
+            // textBox4
             // 
-            this.Email.Location = new System.Drawing.Point(138, 246);
-            this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(144, 25);
-            this.Email.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = " Documento del Cliente";
-            // 
-            // DocumentConsulta
-            // 
-            this.DocumentConsulta.Location = new System.Drawing.Point(257, 31);
-            this.DocumentConsulta.Name = "DocumentConsulta";
-            this.DocumentConsulta.Size = new System.Drawing.Size(164, 25);
-            this.DocumentConsulta.TabIndex = 1;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(59, 123);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(362, 140);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Documento Cliente";
-            // 
-            // DocumentoModificar
-            // 
-            this.DocumentoModificar.Location = new System.Drawing.Point(237, 29);
-            this.DocumentoModificar.Name = "DocumentoModificar";
-            this.DocumentoModificar.Size = new System.Drawing.Size(148, 25);
-            this.DocumentoModificar.TabIndex = 1;
-            // 
-            // Consultar_Modificar_Cliente
-            // 
-            this.Consultar_Modificar_Cliente.Location = new System.Drawing.Point(135, 73);
-            this.Consultar_Modificar_Cliente.Name = "Consultar_Modificar_Cliente";
-            this.Consultar_Modificar_Cliente.Size = new System.Drawing.Size(176, 26);
-            this.Consultar_Modificar_Cliente.TabIndex = 2;
-            this.Consultar_Modificar_Cliente.Text = "Consultar";
-            this.Consultar_Modificar_Cliente.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(85, 125);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Nombre";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(85, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 18);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Direccion";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(85, 214);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 18);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Telefono";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(177, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 25);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(177, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 25);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(177, 211);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 25);
-            this.textBox3.TabIndex = 8;
+            this.textBox4.Location = new System.Drawing.Point(177, 251);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(158, 25);
+            this.textBox4.TabIndex = 10;
             // 
             // Guardar_Modificar_Cliente
             // 
@@ -350,21 +294,78 @@
             this.Guardar_Modificar_Cliente.Text = "Guardar";
             this.Guardar_Modificar_Cliente.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // textBox3
             // 
-            this.textBox4.Location = new System.Drawing.Point(177, 251);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 25);
-            this.textBox4.TabIndex = 10;
+            this.textBox3.Location = new System.Drawing.Point(177, 211);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(158, 25);
+            this.textBox3.TabIndex = 8;
             // 
-            // label11
+            // textBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(85, 254);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Correo";
+            this.textBox2.Location = new System.Drawing.Point(177, 164);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(158, 25);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(177, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 25);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(85, 214);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 18);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Telefono";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(85, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 18);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Direccion";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(85, 125);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 18);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Nombre";
+            // 
+            // Consultar_Modificar_Cliente
+            // 
+            this.Consultar_Modificar_Cliente.Location = new System.Drawing.Point(135, 73);
+            this.Consultar_Modificar_Cliente.Name = "Consultar_Modificar_Cliente";
+            this.Consultar_Modificar_Cliente.Size = new System.Drawing.Size(176, 26);
+            this.Consultar_Modificar_Cliente.TabIndex = 2;
+            this.Consultar_Modificar_Cliente.Text = "Consultar";
+            this.Consultar_Modificar_Cliente.UseVisualStyleBackColor = true;
+            // 
+            // DocumentoModificar
+            // 
+            this.DocumentoModificar.Location = new System.Drawing.Point(237, 29);
+            this.DocumentoModificar.Name = "DocumentoModificar";
+            this.DocumentoModificar.Size = new System.Drawing.Size(148, 25);
+            this.DocumentoModificar.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(38, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Documento Cliente";
             // 
             // Cliente
             // 

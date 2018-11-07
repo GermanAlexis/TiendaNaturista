@@ -16,5 +16,10 @@ namespace TiendaNaturista
         {
             InitializeComponent();
         }
+
+        private void SaveClient_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hola cole");
+        }
     }
 }
