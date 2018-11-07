@@ -28,5 +28,6 @@ namespace TiendaNaturista
 
             LP.InsertarProducto(CodigoProducto, DescripcionProducto, ValorProducto, CantidadProducto);
         }
+
     }
 }
