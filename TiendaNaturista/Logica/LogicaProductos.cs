@@ -16,7 +16,7 @@ namespace TiendaNaturista.Logica
             try
             {
 
-                string sql = "INSERT INTO Clientes VALUES(@CodeProduc, @DescriProdc, @ValorProduc, @CantidadProduc)";
+                string sql = "INSERT INTO Productos VALUES(@CodeProduc, @DescriProdc, @ValorProduc, @CantidadProduc)";
                 SqlCommand cmd = new SqlCommand(sql, Con.Conex());
                 cmd.Parameters.AddWithValue("@CodeProduc", CodigoProducto);
                 cmd.Parameters.AddWithValue("@DescriProdc", DescripcionProducto);
