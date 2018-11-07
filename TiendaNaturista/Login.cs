@@ -21,8 +21,6 @@ namespace TiendaNaturista
 
         private void IngresarLogin_Click(object sender, EventArgs e)
         {
-            Form Menu = new Menu();
-            Menu.Show();
             string user = User.Text;
             string pass = Passwork.Text;
 
@@ -30,7 +28,8 @@ namespace TiendaNaturista
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Vendedor where Ven_User=@user and Ven_Password=@password", Con.Conex());
+                string sql = "SELECT * FROM Vendedor where Ven_User=@user and Ven_Password=@password";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
 
                 cmd.Parameters.AddWithValue("@user", user);
                 cmd.Parameters.AddWithValue("@password", pass);
