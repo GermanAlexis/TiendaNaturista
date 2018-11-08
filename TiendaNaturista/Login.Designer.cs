@@ -64,7 +64,6 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(164, 26);
             this.User.TabIndex = 1;
-            this.User.TextChanged += new System.EventHandler(this.User_TextChanged);
             // 
             // Passwork
             // 

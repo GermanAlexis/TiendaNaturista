@@ -28,5 +28,7 @@ namespace TiendaNaturista
             back.Show();
             this.Hide();
         }
+
+        
     }
 }

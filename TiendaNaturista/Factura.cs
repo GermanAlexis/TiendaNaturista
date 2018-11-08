@@ -23,5 +23,15 @@ namespace TiendaNaturista
             back.Show();
             this.Hide();
         }
+
+        private void GeneraFac_Click(object sender, EventArgs e)
+        {
+            if(GeneraFac.Enabled == true)
+            {
+                CodeFact.Enabled = false;
+                comboBox_Cliente.Enabled = false;
+                comboBoxVendedor.Enabled = false;
+            }
+        }
     }
 }

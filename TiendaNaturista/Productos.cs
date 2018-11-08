@@ -92,5 +92,25 @@ namespace TiendaNaturista
             }
             
         }
+
+        private void ClearPro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarConsulta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ModificarConsulta.Checked == true )
+            {
+                DescripcionSearch.Enabled = true;
+                ValorSearch.Enabled = true;
+                CantidadSearch.Enabled = true;
+            }
+        }
+
+        private void DescripcionSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

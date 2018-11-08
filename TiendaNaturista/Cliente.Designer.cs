@@ -61,10 +61,12 @@
             this.DocumentConsulta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.IngresarPro.SuspendLayout();
             this.IngresarCliente.SuspendLayout();
             this.ConsultarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -92,6 +94,7 @@
             // IngresarCliente
             // 
             this.IngresarCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.IngresarCliente.Controls.Add(this.dataGridView2);
             this.IngresarCliente.Controls.Add(this.Email);
             this.IngresarCliente.Controls.Add(this.correo);
             this.IngresarCliente.Controls.Add(this.label4);
@@ -113,7 +116,7 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(138, 190);
+            this.Email.Location = new System.Drawing.Point(138, 141);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(144, 25);
             this.Email.TabIndex = 6;
@@ -121,7 +124,7 @@
             // correo
             // 
             this.correo.AutoSize = true;
-            this.correo.Location = new System.Drawing.Point(28, 197);
+            this.correo.Location = new System.Drawing.Point(28, 144);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(55, 18);
             this.correo.TabIndex = 10;
@@ -139,7 +142,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 115);
+            this.label3.Location = new System.Drawing.Point(28, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 18);
             this.label3.TabIndex = 8;
@@ -165,7 +168,7 @@
             // 
             // ClearClient
             // 
-            this.ClearClient.Location = new System.Drawing.Point(138, 309);
+            this.ClearClient.Location = new System.Drawing.Point(59, 282);
             this.ClearClient.Name = "ClearClient";
             this.ClearClient.Size = new System.Drawing.Size(144, 25);
             this.ClearClient.TabIndex = 8;
@@ -174,7 +177,7 @@
             // 
             // SaveClient
             // 
-            this.SaveClient.Location = new System.Drawing.Point(318, 311);
+            this.SaveClient.Location = new System.Drawing.Point(59, 205);
             this.SaveClient.Name = "SaveClient";
             this.SaveClient.Size = new System.Drawing.Size(144, 23);
             this.SaveClient.TabIndex = 7;
@@ -191,7 +194,7 @@
             // 
             // AddresClient
             // 
-            this.AddresClient.Location = new System.Drawing.Point(138, 112);
+            this.AddresClient.Location = new System.Drawing.Point(138, 89);
             this.AddresClient.Name = "AddresClient";
             this.AddresClient.Size = new System.Drawing.Size(144, 25);
             this.AddresClient.TabIndex = 4;
@@ -275,6 +278,7 @@
             // 
             // EmailMod
             // 
+            this.EmailMod.Enabled = false;
             this.EmailMod.Location = new System.Drawing.Point(123, 266);
             this.EmailMod.Name = "EmailMod";
             this.EmailMod.Size = new System.Drawing.Size(158, 25);
@@ -291,6 +295,7 @@
             // 
             // PhoneMod
             // 
+            this.PhoneMod.Enabled = false;
             this.PhoneMod.Location = new System.Drawing.Point(123, 225);
             this.PhoneMod.Name = "PhoneMod";
             this.PhoneMod.Size = new System.Drawing.Size(158, 25);
@@ -298,6 +303,7 @@
             // 
             // AddresMod
             // 
+            this.AddresMod.Enabled = false;
             this.AddresMod.Location = new System.Drawing.Point(123, 189);
             this.AddresMod.Name = "AddresMod";
             this.AddresMod.Size = new System.Drawing.Size(158, 25);
@@ -305,10 +311,12 @@
             // 
             // NameMod
             // 
+            this.NameMod.Enabled = false;
             this.NameMod.Location = new System.Drawing.Point(123, 148);
             this.NameMod.Name = "NameMod";
             this.NameMod.Size = new System.Drawing.Size(158, 25);
             this.NameMod.TabIndex = 5;
+            this.NameMod.Visible = false;
             // 
             // label10
             // 
@@ -377,6 +385,14 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(281, 205);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(263, 136);
+            this.dataGridView2.TabIndex = 11;
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,13 +410,13 @@
             this.ShowIcon = false;
             this.Text = "Cliente";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Cliente_Load);
             this.IngresarPro.ResumeLayout(false);
             this.IngresarCliente.ResumeLayout(false);
             this.IngresarCliente.PerformLayout();
             this.ConsultarCliente.ResumeLayout(false);
             this.ConsultarCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +455,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Consultar_Modificar_Cliente;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

@@ -48,7 +48,6 @@ namespace TiendaNaturista
             this.DatosProductos = new System.Windows.Forms.TabPage();
             this.ConsultarPro = new System.Windows.Forms.Button();
             this.ConfirmarPro = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CantidadSearch = new System.Windows.Forms.TextBox();
             this.ValorSearch = new System.Windows.Forms.TextBox();
             this.DescripcionSearch = new System.Windows.Forms.TextBox();
@@ -66,7 +65,6 @@ namespace TiendaNaturista
             this.IngresarProdcutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MostrarTodosProducto)).BeginInit();
             this.DatosProductos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // IngresarPro
@@ -77,7 +75,7 @@ namespace TiendaNaturista
             this.IngresarPro.Location = new System.Drawing.Point(41, 44);
             this.IngresarPro.Name = "IngresarPro";
             this.IngresarPro.SelectedIndex = 0;
-            this.IngresarPro.Size = new System.Drawing.Size(664, 415);
+            this.IngresarPro.Size = new System.Drawing.Size(613, 415);
             this.IngresarPro.TabIndex = 2;
             // 
             // IngresarProdcutos
@@ -97,7 +95,7 @@ namespace TiendaNaturista
             this.IngresarProdcutos.Location = new System.Drawing.Point(4, 27);
             this.IngresarProdcutos.Name = "IngresarProdcutos";
             this.IngresarProdcutos.Padding = new System.Windows.Forms.Padding(3);
-            this.IngresarProdcutos.Size = new System.Drawing.Size(656, 384);
+            this.IngresarProdcutos.Size = new System.Drawing.Size(605, 384);
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
             // 
@@ -155,6 +153,7 @@ namespace TiendaNaturista
             this.ClearPro.TabIndex = 5;
             this.ClearPro.Text = "Limpiar ";
             this.ClearPro.UseVisualStyleBackColor = false;
+            this.ClearPro.Click += new System.EventHandler(this.ClearPro_Click);
             // 
             // SaveProduc
             // 
@@ -201,7 +200,6 @@ namespace TiendaNaturista
             this.DatosProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.DatosProductos.Controls.Add(this.ConsultarPro);
             this.DatosProductos.Controls.Add(this.ConfirmarPro);
-            this.DatosProductos.Controls.Add(this.dataGridView1);
             this.DatosProductos.Controls.Add(this.CantidadSearch);
             this.DatosProductos.Controls.Add(this.ValorSearch);
             this.DatosProductos.Controls.Add(this.DescripcionSearch);
@@ -215,7 +213,7 @@ namespace TiendaNaturista
             this.DatosProductos.Location = new System.Drawing.Point(4, 27);
             this.DatosProductos.Name = "DatosProductos";
             this.DatosProductos.Padding = new System.Windows.Forms.Padding(3);
-            this.DatosProductos.Size = new System.Drawing.Size(656, 384);
+            this.DatosProductos.Size = new System.Drawing.Size(605, 384);
             this.DatosProductos.TabIndex = 1;
             this.DatosProductos.Text = "Datos Productos";
             // 
@@ -234,52 +232,44 @@ namespace TiendaNaturista
             // 
             this.ConfirmarPro.BackColor = System.Drawing.Color.Brown;
             this.ConfirmarPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ConfirmarPro.Location = new System.Drawing.Point(130, 314);
+            this.ConfirmarPro.Location = new System.Drawing.Point(197, 308);
             this.ConfirmarPro.Name = "ConfirmarPro";
             this.ConfirmarPro.Size = new System.Drawing.Size(114, 35);
             this.ConfirmarPro.TabIndex = 13;
             this.ConfirmarPro.Text = "Aceptar";
-<<<<<<< HEAD
-            this.ConfirmarPro.UseVisualStyleBackColor = true;
-            this.ConfirmarPro.Click += new System.EventHandler(this.ConfirmarPro_Click);
-=======
             this.ConfirmarPro.UseVisualStyleBackColor = false;
->>>>>>> master
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(354, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(273, 266);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.TabStop = false;
+            this.ConfirmarPro.Click += new System.EventHandler(this.ConfirmarPro_Click);
             // 
             // CantidadSearch
             // 
+            this.CantidadSearch.Enabled = false;
             this.CantidadSearch.Location = new System.Drawing.Point(130, 258);
             this.CantidadSearch.Name = "CantidadSearch";
-            this.CantidadSearch.Size = new System.Drawing.Size(160, 25);
+            this.CantidadSearch.Size = new System.Drawing.Size(303, 25);
             this.CantidadSearch.TabIndex = 11;
             // 
             // ValorSearch
             // 
+            this.ValorSearch.Enabled = false;
             this.ValorSearch.Location = new System.Drawing.Point(130, 196);
             this.ValorSearch.Name = "ValorSearch";
-            this.ValorSearch.Size = new System.Drawing.Size(160, 25);
+            this.ValorSearch.Size = new System.Drawing.Size(303, 25);
             this.ValorSearch.TabIndex = 10;
             // 
             // DescripcionSearch
             // 
+            this.DescripcionSearch.Enabled = false;
             this.DescripcionSearch.Location = new System.Drawing.Point(130, 139);
             this.DescripcionSearch.Name = "DescripcionSearch";
-            this.DescripcionSearch.Size = new System.Drawing.Size(160, 25);
+            this.DescripcionSearch.Size = new System.Drawing.Size(303, 25);
             this.DescripcionSearch.TabIndex = 9;
+            this.DescripcionSearch.WordWrap = false;
+            this.DescripcionSearch.TextChanged += new System.EventHandler(this.DescripcionSearch_TextChanged);
             // 
             // EliminarConsulta
             // 
             this.EliminarConsulta.AutoSize = true;
-            this.EliminarConsulta.Location = new System.Drawing.Point(230, 83);
+            this.EliminarConsulta.Location = new System.Drawing.Point(346, 92);
             this.EliminarConsulta.Name = "EliminarConsulta";
             this.EliminarConsulta.Size = new System.Drawing.Size(87, 22);
             this.EliminarConsulta.TabIndex = 4;
@@ -289,12 +279,13 @@ namespace TiendaNaturista
             // ModificarConsulta
             // 
             this.ModificarConsulta.AutoSize = true;
-            this.ModificarConsulta.Location = new System.Drawing.Point(68, 83);
+            this.ModificarConsulta.Location = new System.Drawing.Point(142, 92);
             this.ModificarConsulta.Name = "ModificarConsulta";
             this.ModificarConsulta.Size = new System.Drawing.Size(92, 22);
             this.ModificarConsulta.TabIndex = 3;
             this.ModificarConsulta.Text = "Modificar";
             this.ModificarConsulta.UseVisualStyleBackColor = true;
+            this.ModificarConsulta.CheckedChanged += new System.EventHandler(this.ModificarConsulta_CheckedChanged);
             // 
             // label8
             // 
@@ -377,7 +368,7 @@ namespace TiendaNaturista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(727, 471);
+            this.ClientSize = new System.Drawing.Size(695, 471);
             this.ControlBox = false;
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Atras);
@@ -394,7 +385,6 @@ namespace TiendaNaturista
             ((System.ComponentModel.ISupportInitialize)(this.MostrarTodosProducto)).EndInit();
             this.DatosProductos.ResumeLayout(false);
             this.DatosProductos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,7 +418,6 @@ namespace TiendaNaturista
         private System.Windows.Forms.TextBox CantidadSearch;
         private System.Windows.Forms.TextBox ValorSearch;
         private System.Windows.Forms.TextBox DescripcionSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         public int HEAD { get; private set; }
         private Button Atras;
