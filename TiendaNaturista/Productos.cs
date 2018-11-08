@@ -34,11 +34,11 @@ namespace TiendaNaturista
         {
             int Codigo = Int32.Parse(CodigoPro_Consulta.Text);
 
-            SqlDataReader sdr = LP.BuscarProductos(Codigo);
+            //SqlDataReader sdr = LP.BuscarProductos(Codigo);
 
-            DescripcionSearch.Text = sdr.GetString(1);
+            /*DescripcionSearch.Text = sdr.GetString(1);
             ValorSearch.Text = sdr.GetDouble(2).ToString();
-            CantidadSearch.Text = sdr.GetInt32(3).ToString();
+            CantidadSearch.Text = sdr.GetInt32(3).ToString();*/
         }
     }
 }
