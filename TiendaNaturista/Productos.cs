@@ -21,17 +21,17 @@ namespace TiendaNaturista
 
         private void SaveProduc_Click(object sender, EventArgs e)
         {
-            string CodigoProducto = CodeProduc.Text;
-            string DescripcionProducto = DescriProdc.Text;
-            string ValorProducto = ValorProduc.Text;
-            string CantidadProducto = CantidadProduc.Text;
+            string CodigoProducto = CodePro_Ingresar.Text;
+            string DescripcionProducto = DescripcionPro_Ingresar.Text;
+            string ValorProducto = ValorPro_Ingresar.Text;
+            string CantidadProducto = CantidadPro_Ingresar.Text;
 
             LP.InsertarProducto(CodigoProducto, DescripcionProducto, ValorProducto, CantidadProducto);
         }
 
         private void BtnConsultarPro_Click(object sender, EventArgs e)
         {
-            int Codigo = Int32.Parse(ConsultarPro.Text);
+            int Codigo = Int32.Parse(CodigoPro_Consulta.Text);
 
             LP.BuscarProducto(Codigo);
 
