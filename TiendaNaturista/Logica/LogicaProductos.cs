@@ -16,14 +16,13 @@ namespace TiendaNaturista.Logica
         {
             try
             {
-
+                Con.Conectar();
                 string sql = "INSERT INTO Productos VALUES(@CodeProduc, @DescriProdc, @ValorProduc, @CantidadProduc)";
                 SqlCommand cmd = new SqlCommand(sql, Con.Conex());
                 cmd.Parameters.AddWithValue("@CodeProduc", CodigoProducto);
                 cmd.Parameters.AddWithValue("@DescriProdc", DescripcionProducto);
                 cmd.Parameters.AddWithValue("@ValorProduc", ValorProducto);
                 cmd.Parameters.AddWithValue("@CantidadProduc", CantProducto);
-                Con.Conectar();
                 int result = cmd.ExecuteNonQuery();
 
                 if (result == 1)
@@ -67,46 +66,65 @@ namespace TiendaNaturista.Logica
             }
         }
 
-        public void BuscarProducto(int Codigo)
+        public void ActualizarProducto(string CodigoProducto, string DescripcionProducto, string ValorProducto, string CantProducto)
         {
             try
             {
                 Con.Conectar();
-                string sql = "SELECT * FROM Productos where Pro_Code=@Code";
+                string sql = "UPDATE Productos SET Pro_Descripcion = @DescriProduc, Pro_Valor = @ValorProduc, Pro_Cantidad = @CantidadProduc WHERE Pro_Code = @CodeProduc";
                 SqlCommand cmd = new SqlCommand(sql, Con.Conex());
-                cmd.Parameters.AddWithValue("@Code", Codigo);
-                SqlDataReader dr = cmd.ExecuteReader();
+                cmd.Parameters.AddWithValue("@DescriProduc", DescripcionProducto);
+                cmd.Parameters.AddWithValue("@ValorProduc", ValorProducto);
+                cmd.Parameters.AddWithValue("@CantidadProduc", CantProducto);
+                cmd.Parameters.AddWithValue("@CodeProduc", CodigoProducto);                
+                int result = cmd.ExecuteNonQuery();
 
-                if (dr.Read())
+                if (result == 1)
                 {
-                    MessageBox.Show(dr.GetInt32(1).ToString());
-
+                    MessageBox.Show("Producto actualizado exitosamente");
                 }
-                else {
-                    MessageBox.Show("No existe un producto con este codigo");
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar el producto. Intente mas tarde");
                 }
-
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
             finally
             {
                 Con.Desconectar();
             }
         }
 
-        /*public SqlDataReader BuscarProductos(int Codigo)
+        public void ElminarProducto(int Codigo)
         {
-            Con.Conectar();
-            string sql = "SELECT * FROM Productos where Pro_Code=@Code";
-            SqlCommand cmd = new SqlCommand(sql, Con.Conex());
-            cmd.Parameters.AddWithValue("@Code", Codigo);
-            SqlDataReader dr = cmd.ExecuteReader();
+            try
+            {
+                Con.Conectar();
+                string sql = "DELETE FROM Productos WHERE Pro_Code = @CodeProduc";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
+                cmd.Parameters.AddWithValue("@CodeProduc", Codigo);
+                int result = cmd.ExecuteNonQuery();
+          
+                if (result == 1)
+                {
+                    MessageBox.Show("Producto eliminado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el producto. Intente mas tarde");
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-            dr.Read();
-            return dr;
-            Con.Desconectar();
-        }*/
+            finally
+            {
+                Con.Desconectar();
+            }
+        }
     }
 }
