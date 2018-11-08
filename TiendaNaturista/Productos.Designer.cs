@@ -42,10 +42,11 @@
             this.DescriProdc = new System.Windows.Forms.TextBox();
             this.CodeProduc = new System.Windows.Forms.TextBox();
             this.DatosProductos = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CantidadSearch = new System.Windows.Forms.TextBox();
+            this.ValorSearch = new System.Windows.Forms.TextBox();
+            this.DescripcionSearch = new System.Windows.Forms.TextBox();
             this.AceptarConsulta = new System.Windows.Forms.Button();
             this.EliminarConsulta = new System.Windows.Forms.CheckBox();
             this.ModificarConsulta = new System.Windows.Forms.CheckBox();
@@ -55,10 +56,6 @@
             this.BtnConsultarPro = new System.Windows.Forms.Button();
             this.ConsultarPro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
-            this.button1 = new System.Windows.Forms.Button();
->>>>>>> master
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MostrarProductos)).BeginInit();
@@ -93,11 +90,7 @@
             this.IngresarProdcutos.Location = new System.Drawing.Point(4, 27);
             this.IngresarProdcutos.Name = "IngresarProdcutos";
             this.IngresarProdcutos.Padding = new System.Windows.Forms.Padding(3);
-<<<<<<< HEAD
             this.IngresarProdcutos.Size = new System.Drawing.Size(682, 384);
-=======
-            this.IngresarProdcutos.Size = new System.Drawing.Size(656, 381);
->>>>>>> master
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
             this.IngresarProdcutos.UseVisualStyleBackColor = true;
@@ -197,9 +190,9 @@
             // 
             this.DatosProductos.Controls.Add(this.button1);
             this.DatosProductos.Controls.Add(this.dataGridView1);
-            this.DatosProductos.Controls.Add(this.textBox4);
-            this.DatosProductos.Controls.Add(this.textBox3);
-            this.DatosProductos.Controls.Add(this.textBox2);
+            this.DatosProductos.Controls.Add(this.CantidadSearch);
+            this.DatosProductos.Controls.Add(this.ValorSearch);
+            this.DatosProductos.Controls.Add(this.DescripcionSearch);
             this.DatosProductos.Controls.Add(this.AceptarConsulta);
             this.DatosProductos.Controls.Add(this.EliminarConsulta);
             this.DatosProductos.Controls.Add(this.ModificarConsulta);
@@ -217,6 +210,15 @@
             this.DatosProductos.Text = "Datos Productos";
             this.DatosProductos.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(96, 319);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -225,34 +227,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(273, 266);
             this.dataGridView1.TabIndex = 12;
             // 
-            // textBox4
+            // CantidadSearch
             // 
-            this.textBox4.Location = new System.Drawing.Point(130, 258);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 25);
-            this.textBox4.TabIndex = 11;
+            this.CantidadSearch.Location = new System.Drawing.Point(130, 258);
+            this.CantidadSearch.Name = "CantidadSearch";
+            this.CantidadSearch.Size = new System.Drawing.Size(160, 25);
+            this.CantidadSearch.TabIndex = 11;
             // 
-            // textBox3
+            // ValorSearch
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 196);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 25);
-            this.textBox3.TabIndex = 10;
+            this.ValorSearch.Location = new System.Drawing.Point(130, 196);
+            this.ValorSearch.Name = "ValorSearch";
+            this.ValorSearch.Size = new System.Drawing.Size(160, 25);
+            this.ValorSearch.TabIndex = 10;
             // 
-            // textBox2
+            // DescripcionSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 25);
-            this.textBox2.TabIndex = 9;
+            this.DescripcionSearch.Location = new System.Drawing.Point(130, 139);
+            this.DescripcionSearch.Name = "DescripcionSearch";
+            this.DescripcionSearch.Size = new System.Drawing.Size(160, 25);
+            this.DescripcionSearch.TabIndex = 9;
             // 
             // AceptarConsulta
             // 
-<<<<<<< HEAD
-            this.AceptarConsulta.Location = new System.Drawing.Point(90, 319);
-=======
             this.AceptarConsulta.Location = new System.Drawing.Point(214, 319);
->>>>>>> master
             this.AceptarConsulta.Name = "AceptarConsulta";
             this.AceptarConsulta.Size = new System.Drawing.Size(76, 30);
             this.AceptarConsulta.TabIndex = 8;
@@ -314,10 +312,7 @@
             this.BtnConsultarPro.TabIndex = 2;
             this.BtnConsultarPro.Text = "Consultar";
             this.BtnConsultarPro.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.BtnConsultarPro.Click += new System.EventHandler(this.BtnConsultarPro_Click);
-=======
->>>>>>> master
             // 
             // ConsultarPro
             // 
@@ -334,18 +329,6 @@
             this.label5.Size = new System.Drawing.Size(54, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "Codigo";
-<<<<<<< HEAD
-=======
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(96, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
->>>>>>> master
             // 
             // Productos
             // 
@@ -390,14 +373,13 @@
         private System.Windows.Forms.Button BtnConsultarPro;
         private System.Windows.Forms.TextBox ConsultarPro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CantidadSearch;
+        private System.Windows.Forms.TextBox ValorSearch;
+        private System.Windows.Forms.TextBox DescripcionSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
-<<<<<<< HEAD
         private System.Windows.Forms.DataGridView MostrarProductos;
-=======
         private System.Windows.Forms.Button button1;
->>>>>>> master
+        public int HEAD { get; private set; }
+
     }
 }
