@@ -34,7 +34,7 @@ namespace TiendaNaturista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarProdcutos = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.MostrarTodosProducto = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@ namespace TiendaNaturista
             this.label10 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MostrarTodosProducto)).BeginInit();
             this.DatosProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@ namespace TiendaNaturista
             // IngresarProdcutos
             // 
             this.IngresarProdcutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.IngresarProdcutos.Controls.Add(this.dataGridView2);
+            this.IngresarProdcutos.Controls.Add(this.MostrarTodosProducto);
             this.IngresarProdcutos.Controls.Add(this.label4);
             this.IngresarProdcutos.Controls.Add(this.label3);
             this.IngresarProdcutos.Controls.Add(this.label2);
@@ -101,13 +101,13 @@ namespace TiendaNaturista
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
             // 
-            // dataGridView2
+            // MostrarTodosProducto
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(86, 248);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(478, 121);
-            this.dataGridView2.TabIndex = 10;
+            this.MostrarTodosProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MostrarTodosProducto.Location = new System.Drawing.Point(86, 248);
+            this.MostrarTodosProducto.Name = "MostrarTodosProducto";
+            this.MostrarTodosProducto.Size = new System.Drawing.Size(478, 121);
+            this.MostrarTodosProducto.TabIndex = 10;
             // 
             // label4
             // 
@@ -233,6 +233,7 @@ namespace TiendaNaturista
             this.ConfirmarPro.TabIndex = 13;
             this.ConfirmarPro.Text = "Aceptar";
             this.ConfirmarPro.UseVisualStyleBackColor = true;
+            this.ConfirmarPro.Click += new System.EventHandler(this.ConfirmarPro_Click);
             // 
             // dataGridView1
             // 
@@ -378,7 +379,7 @@ namespace TiendaNaturista
             this.IngresarPro.ResumeLayout(false);
             this.IngresarProdcutos.ResumeLayout(false);
             this.IngresarProdcutos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MostrarTodosProducto)).EndInit();
             this.DatosProductos.ResumeLayout(false);
             this.DatosProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -422,6 +423,6 @@ namespace TiendaNaturista
         private Button ConfirmarPro;
         private Button ConsultarPro;
         private Label label10;
-        private DataGridView dataGridView2;
+        private DataGridView MostrarTodosProducto;
     }
 }
