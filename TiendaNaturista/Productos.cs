@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TiendaNaturista
 {
-    public partial class Productos : Form
+    public partial class Productos : System.Windows.Forms.Form
     {
         Logica.LogicaProductos LP = new Logica.LogicaProductos();
         public Productos()
@@ -29,23 +29,22 @@ namespace TiendaNaturista
 
             LP.InsertarProducto(CodigoProducto, DescripcionProducto, ValorProducto, CantidadProducto);
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Form back = new Menu();
+            back.Show();
+            this.Hide();
+        }
 
-        private void BtnConsultarPro_Click(object sender, EventArgs e)
+        private void ConsultarPro_Click(object sender, EventArgs e)
         {
             int Codigo = Int32.Parse(CodigoPro_Consulta.Text);
 
-            SqlDataReader sdr = LP.BuscarProductos(Codigo);
+           /* SqlDataReader sdr = LP.BuscarProductos(Codigo);
 
             DescripcionSearch.Text = sdr.GetString(1);
             ValorSearch.Text = sdr.GetDouble(2).ToString();
-            CantidadSearch.Text = sdr.GetInt32(3).ToString();
-        }
-
-        private void Back_Click(object sender, EventArgs e)
-        {
-            Form back = new Menu();
-            back.Show();
-            this.Hide();
+            CantidadSearch.Text = sdr.GetInt32(3).ToString();*/
         }
     }
 }

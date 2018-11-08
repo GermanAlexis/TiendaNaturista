@@ -67,7 +67,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(624, 39);
+            this.dateTimePicker1.Location = new System.Drawing.Point(492, 34);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(298, 25);
@@ -79,7 +79,7 @@
             this.AddProduc.BackColor = System.Drawing.Color.Aquamarine;
             this.AddProduc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddProduc.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.AddProduc.Location = new System.Drawing.Point(748, 99);
+            this.AddProduc.Location = new System.Drawing.Point(616, 85);
             this.AddProduc.Margin = new System.Windows.Forms.Padding(4);
             this.AddProduc.Name = "AddProduc";
             this.AddProduc.Size = new System.Drawing.Size(174, 42);
@@ -147,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(535, 353);
+            this.label5.Location = new System.Drawing.Point(432, 364);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 18);
@@ -157,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(553, 39);
+            this.label6.Location = new System.Drawing.Point(432, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 16;
@@ -166,7 +166,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(567, 169);
+            this.dataGridView1.Location = new System.Drawing.Point(435, 154);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(355, 150);
             this.dataGridView1.TabIndex = 17;
@@ -175,9 +175,9 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(639, 342);
+            this.dataGridView2.Location = new System.Drawing.Point(531, 342);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(283, 40);
+            this.dataGridView2.Size = new System.Drawing.Size(259, 40);
             this.dataGridView2.TabIndex = 18;
             this.dataGridView2.TabStop = false;
             // 
@@ -186,15 +186,15 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(121, 119);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(336, 26);
+            this.comboBox1.Size = new System.Drawing.Size(235, 26);
             this.comboBox1.TabIndex = 2;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(121, 201);
+            this.comboBox2.Location = new System.Drawing.Point(121, 197);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(336, 26);
+            this.comboBox2.Size = new System.Drawing.Size(235, 26);
             this.comboBox2.TabIndex = 3;
             // 
             // Back
@@ -202,7 +202,7 @@
             this.Back.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Back.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
             this.Back.Location = new System.Drawing.Point(20, 12);
             this.Back.Name = "Back";
@@ -217,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(990, 412);
+            this.ClientSize = new System.Drawing.Size(811, 420);
             this.ControlBox = false;
             this.Controls.Add(this.Back);
             this.Controls.Add(this.comboBox2);

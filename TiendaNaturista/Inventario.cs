@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace TiendaNaturista
 {
-    public partial class Factura : System.Windows.Forms.Form
+    public partial class Inventario : System.Windows.Forms.Form
     {
-        public Factura()
+        public Inventario()
         {
             InitializeComponent();
         }
 
-        private void Back_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Form back = new Menu();
-            back.Show();
+            System.Windows.Forms.Form atras = new Menu();
+            atras.Show();
             this.Hide();
+            
         }
     }
 }

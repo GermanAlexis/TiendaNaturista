@@ -100,7 +100,7 @@ namespace TiendaNaturista.Logica
             {
                 Con.Desconectar();
             }
-        }*/
+        }
 
         public SqlDataReader BuscarProductos(int Codigo)
         {
@@ -113,6 +113,6 @@ namespace TiendaNaturista.Logica
             dr.Read();
             return dr;
             Con.Desconectar();
-        }
+        }*/
     }
 }

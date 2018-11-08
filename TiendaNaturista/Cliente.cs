@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TiendaNaturista
 {
-    public partial class Cliente : Form
+    public partial class Cliente : System.Windows.Forms.Form
     {
         public Cliente()
         {
@@ -24,7 +24,7 @@ namespace TiendaNaturista
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Form back = new Menu();
+            System.Windows.Forms.Form back = new Menu();
             back.Show();
             this.Hide();
         }

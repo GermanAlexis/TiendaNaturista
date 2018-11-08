@@ -12,7 +12,7 @@ using WindowsFormsApp;
 
 namespace TiendaNaturista
 {
-    public partial class Login : Form
+    public partial class Login : System.Windows.Forms.Form
     {
         public Login()
         {

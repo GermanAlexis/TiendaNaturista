@@ -33,7 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.Close = new System.Windows.Forms.Button();
+            this.seccion = new System.Windows.Forms.Button();
             this.cerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -96,21 +96,22 @@
             this.button4.Text = "Inventario";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Close
+            // seccion
             // 
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Image = ((System.Drawing.Image)(resources.GetObject("Close.Image")));
-            this.Close.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Close.Location = new System.Drawing.Point(92, 371);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(118, 52);
-            this.Close.TabIndex = 5;
-            this.Close.Text = "Cerrar Seccion";
-            this.Close.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.seccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seccion.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seccion.Image = ((System.Drawing.Image)(resources.GetObject("seccion.Image")));
+            this.seccion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.seccion.Location = new System.Drawing.Point(92, 371);
+            this.seccion.Name = "seccion";
+            this.seccion.Size = new System.Drawing.Size(118, 52);
+            this.seccion.TabIndex = 5;
+            this.seccion.Text = "Cerrar Seccion";
+            this.seccion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.seccion.UseVisualStyleBackColor = true;
+            this.seccion.Click += new System.EventHandler(this.Close_Click);
             // 
             // cerrar
             // 
@@ -129,7 +130,7 @@
             this.cerrar.Text = "Cerrar";
             this.cerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cerrar.UseVisualStyleBackColor = false;
-            this.cerrar.Click += new System.EventHandler(this.cerrar_Click_1);
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
             // Menu
             // 
@@ -139,7 +140,7 @@
             this.ClientSize = new System.Drawing.Size(562, 443);
             this.ControlBox = false;
             this.Controls.Add(this.cerrar);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.seccion);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -156,7 +157,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button seccion;
         private System.Windows.Forms.Button cerrar;
     }
 }

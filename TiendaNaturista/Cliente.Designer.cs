@@ -72,7 +72,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poor Richard", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(363, 9);
+            this.label5.Location = new System.Drawing.Point(330, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 31);
             this.label5.TabIndex = 2;
@@ -339,7 +339,7 @@
             // 
             // Consultar_Modificar_Cliente
             // 
-            this.Consultar_Modificar_Cliente.Location = new System.Drawing.Point(147, 64);
+            this.Consultar_Modificar_Cliente.Location = new System.Drawing.Point(257, 64);
             this.Consultar_Modificar_Cliente.Name = "Consultar_Modificar_Cliente";
             this.Consultar_Modificar_Cliente.Size = new System.Drawing.Size(176, 26);
             this.Consultar_Modificar_Cliente.TabIndex = 2;
@@ -350,7 +350,7 @@
             // 
             this.DocumentConsulta.Location = new System.Drawing.Point(257, 24);
             this.DocumentConsulta.Name = "DocumentConsulta";
-            this.DocumentConsulta.Size = new System.Drawing.Size(232, 25);
+            this.DocumentConsulta.Size = new System.Drawing.Size(286, 25);
             this.DocumentConsulta.TabIndex = 1;
             // 
             // label6

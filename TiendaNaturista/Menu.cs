@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TiendaNaturista
 {
-    public partial class Menu : Form
+    public partial class Menu : System.Windows.Forms.Form
     {
         public Menu()
         {
@@ -19,37 +19,46 @@ namespace TiendaNaturista
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form invoice = new Factura();
+            System.Windows.Forms.Form invoice = new Factura();
             invoice.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form Client = new Cliente();
+            System.Windows.Forms.Form Client = new Cliente();
             Client.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Productos Product = new Productos();
+            System.Windows.Forms.Form Product = new Productos();
             Product.Show();
             this.Hide();
         }
 
-        private void cerrar_Click_1(object sender, EventArgs e)
+
+        private void button4_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
-           
+            System.Windows.Forms.Form Inven = new Inventario();
+            Inven.Show();
+            this.Hide();
+
         }
+
 
         private void Close_Click(object sender, EventArgs e)
         {
-            Form CloseSeccion = new Login();
+            System.Windows.Forms.Form CloseSeccion = new Login();
             CloseSeccion.Show();
             this.Hide();
+        }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }
