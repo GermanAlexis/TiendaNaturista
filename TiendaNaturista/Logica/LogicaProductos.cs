@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,55 @@ namespace TiendaNaturista.Logica
                 Con.Desconectar();
             }
 
+        }
+
+        public void MostrarProductos(DataGridView dataGridView)
+        {
+            try
+            {
+                Con.Conectar();
+                string sql = "SELECT * FROM Productos";
+                SqlDataAdapter cmd = new SqlDataAdapter(sql, Con.Conex());
+                DataTable DT = new DataTable();
+                cmd.Fill(DT);
+                dataGridView.DataSource = DT;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                Con.Desconectar();
+            }
+        }
+
+        public void BuscarProducto(int Codigo)
+        {
+            try
+            {
+                Con.Conectar();
+                string sql = "SELECT * FROM Productos where Pro_Code=@Code";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
+                cmd.Parameters.AddWithValue("@Code", Codigo);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    MessageBox.Show(dr.GetInt32(0).ToString());
+
+                } else {
+                    MessageBox.Show("No existe un producto con este codigo");
+                }
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Con.Desconectar();
+            }
         }
     }
 }
