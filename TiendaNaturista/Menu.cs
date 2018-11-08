@@ -21,18 +21,35 @@ namespace TiendaNaturista
         {
             Form invoice = new Factura();
             invoice.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form Client = new Cliente();
             Client.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Productos Product = new Productos();
             Product.Show();
+            this.Hide();
+        }
+
+        private void cerrar_Click_1(object sender, EventArgs e)
+        {
+            
+            this.Close();
+           
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Form CloseSeccion = new Login();
+            CloseSeccion.Show();
+            this.Hide();
         }
     }
 }

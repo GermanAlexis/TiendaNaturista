@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.CodeFact = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.AddProduc = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.ValorTotalFact = new System.Windows.Forms.TextBox();
             this.TerminarFact = new System.Windows.Forms.Button();
-            this.listClientFac = new System.Windows.Forms.ListView();
-            this.listProducFact = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Back = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // CodeFact
@@ -67,62 +71,34 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(298, 25);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.TabStop = false;
             // 
             // AddProduc
             // 
+            this.AddProduc.BackColor = System.Drawing.Color.Aquamarine;
+            this.AddProduc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddProduc.ForeColor = System.Drawing.Color.MidnightBlue;
             this.AddProduc.Location = new System.Drawing.Point(748, 99);
             this.AddProduc.Margin = new System.Windows.Forms.Padding(4);
             this.AddProduc.Name = "AddProduc";
             this.AddProduc.Size = new System.Drawing.Size(174, 42);
             this.AddProduc.TabIndex = 5;
             this.AddProduc.Text = "Agregar Producto";
-            this.AddProduc.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(510, 160);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(412, 151);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // ValorTotalFact
-            // 
-            this.ValorTotalFact.Location = new System.Drawing.Point(698, 350);
-            this.ValorTotalFact.Margin = new System.Windows.Forms.Padding(4);
-            this.ValorTotalFact.Name = "ValorTotalFact";
-            this.ValorTotalFact.Size = new System.Drawing.Size(224, 25);
-            this.ValorTotalFact.TabIndex = 7;
+            this.AddProduc.UseVisualStyleBackColor = false;
             // 
             // TerminarFact
             // 
+            this.TerminarFact.BackColor = System.Drawing.Color.Brown;
+            this.TerminarFact.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.TerminarFact.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.TerminarFact.Location = new System.Drawing.Point(166, 342);
             this.TerminarFact.Margin = new System.Windows.Forms.Padding(4);
             this.TerminarFact.Name = "TerminarFact";
             this.TerminarFact.Size = new System.Drawing.Size(190, 40);
-            this.TerminarFact.TabIndex = 8;
+            this.TerminarFact.TabIndex = 6;
             this.TerminarFact.Text = "Terminar Factura";
-            this.TerminarFact.UseVisualStyleBackColor = true;
-            // 
-            // listClientFac
-            // 
-            this.listClientFac.Location = new System.Drawing.Point(121, 111);
-            this.listClientFac.Margin = new System.Windows.Forms.Padding(4);
-            this.listClientFac.Name = "listClientFac";
-            this.listClientFac.Size = new System.Drawing.Size(380, 30);
-            this.listClientFac.TabIndex = 9;
-            this.listClientFac.UseCompatibleStateImageBehavior = false;
-            // 
-            // listProducFact
-            // 
-            this.listProducFact.Location = new System.Drawing.Point(121, 192);
-            this.listProducFact.Margin = new System.Windows.Forms.Padding(4);
-            this.listProducFact.Name = "listProducFact";
-            this.listProducFact.Size = new System.Drawing.Size(264, 31);
-            this.listProducFact.TabIndex = 10;
-            this.listProducFact.UseCompatibleStateImageBehavior = false;
+            this.TerminarFact.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -171,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(564, 364);
+            this.label5.Location = new System.Drawing.Point(535, 353);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 18);
@@ -181,36 +157,92 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(507, 39);
+            this.label6.Location = new System.Drawing.Point(553, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 16;
             this.label6.Text = "fecha";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(567, 169);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(355, 150);
+            this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.TabStop = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(639, 342);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(283, 40);
+            this.dataGridView2.TabIndex = 18;
+            this.dataGridView2.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(121, 119);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(336, 26);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(121, 201);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(336, 26);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // Back
+            // 
+            this.Back.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
+            this.Back.Location = new System.Drawing.Point(20, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(92, 23);
+            this.Back.TabIndex = 19;
+            this.Back.TabStop = false;
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(990, 412);
+            this.ControlBox = false;
+            this.Controls.Add(this.Back);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listProducFact);
-            this.Controls.Add(this.listClientFac);
             this.Controls.Add(this.TerminarFact);
-            this.Controls.Add(this.ValorTotalFact);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.AddProduc);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.CodeFact);
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Factura";
             this.Text = "Factura";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,16 +254,17 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button AddProduc;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox ValorTotalFact;
         private System.Windows.Forms.Button TerminarFact;
-        private System.Windows.Forms.ListView listClientFac;
-        private System.Windows.Forms.ListView listProducFact;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button Back;
     }
 }

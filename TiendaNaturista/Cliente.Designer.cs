@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.label5 = new System.Windows.Forms.Label();
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarCliente = new System.Windows.Forms.TabPage();
@@ -59,6 +60,7 @@
             this.Consultar_Modificar_Cliente = new System.Windows.Forms.Button();
             this.DocumentConsulta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             this.IngresarPro.SuspendLayout();
             this.IngresarCliente.SuspendLayout();
             this.ConsultarCliente.SuspendLayout();
@@ -85,7 +87,7 @@
             this.IngresarPro.Name = "IngresarPro";
             this.IngresarPro.SelectedIndex = 0;
             this.IngresarPro.Size = new System.Drawing.Size(587, 399);
-            this.IngresarPro.TabIndex = 3;
+            this.IngresarPro.TabIndex = 9;
             // 
             // IngresarCliente
             // 
@@ -114,7 +116,7 @@
             this.Email.Location = new System.Drawing.Point(138, 190);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(144, 25);
-            this.Email.TabIndex = 5;
+            this.Email.TabIndex = 6;
             // 
             // correo
             // 
@@ -166,7 +168,7 @@
             this.ClearClient.Location = new System.Drawing.Point(138, 309);
             this.ClearClient.Name = "ClearClient";
             this.ClearClient.Size = new System.Drawing.Size(144, 25);
-            this.ClearClient.TabIndex = 7;
+            this.ClearClient.TabIndex = 8;
             this.ClearClient.Text = "Limpiar ";
             this.ClearClient.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +177,7 @@
             this.SaveClient.Location = new System.Drawing.Point(318, 311);
             this.SaveClient.Name = "SaveClient";
             this.SaveClient.Size = new System.Drawing.Size(144, 23);
-            this.SaveClient.TabIndex = 6;
+            this.SaveClient.TabIndex = 7;
             this.SaveClient.Text = "Guardar Cliente";
             this.SaveClient.UseVisualStyleBackColor = true;
             this.SaveClient.Click += new System.EventHandler(this.SaveClient_Click);
@@ -185,28 +187,28 @@
             this.PhoneClient.Location = new System.Drawing.Point(400, 116);
             this.PhoneClient.Name = "PhoneClient";
             this.PhoneClient.Size = new System.Drawing.Size(144, 25);
-            this.PhoneClient.TabIndex = 4;
+            this.PhoneClient.TabIndex = 5;
             // 
             // AddresClient
             // 
             this.AddresClient.Location = new System.Drawing.Point(138, 112);
             this.AddresClient.Name = "AddresClient";
             this.AddresClient.Size = new System.Drawing.Size(144, 25);
-            this.AddresClient.TabIndex = 3;
+            this.AddresClient.TabIndex = 4;
             // 
             // NameClient
             // 
             this.NameClient.Location = new System.Drawing.Point(400, 30);
             this.NameClient.Name = "NameClient";
             this.NameClient.Size = new System.Drawing.Size(144, 25);
-            this.NameClient.TabIndex = 2;
+            this.NameClient.TabIndex = 3;
             // 
             // Document
             // 
             this.Document.Location = new System.Drawing.Point(138, 30);
             this.Document.Name = "Document";
             this.Document.Size = new System.Drawing.Size(144, 25);
-            this.Document.TabIndex = 1;
+            this.Document.TabIndex = 2;
             // 
             // ConsultarCliente
             // 
@@ -260,6 +262,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(217, 213);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.TabStop = false;
             // 
             // label11
             // 
@@ -347,7 +350,7 @@
             // 
             this.DocumentConsulta.Location = new System.Drawing.Point(257, 24);
             this.DocumentConsulta.Name = "DocumentConsulta";
-            this.DocumentConsulta.Size = new System.Drawing.Size(164, 25);
+            this.DocumentConsulta.Size = new System.Drawing.Size(232, 25);
             this.DocumentConsulta.TabIndex = 1;
             // 
             // label6
@@ -359,16 +362,37 @@
             this.label6.TabIndex = 0;
             this.label6.Text = " Documento del Cliente";
             // 
+            // Back
+            // 
+            this.Back.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
+            this.Back.Location = new System.Drawing.Point(12, 14);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(92, 23);
+            this.Back.TabIndex = 10;
+            this.Back.TabStop = false;
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(660, 454);
+            this.ControlBox = false;
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.IngresarPro);
             this.Controls.Add(this.label5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Cliente";
+            this.ShowIcon = false;
             this.Text = "Cliente";
+            this.TopMost = true;
             this.IngresarPro.ResumeLayout(false);
             this.IngresarCliente.ResumeLayout(false);
             this.IngresarCliente.PerformLayout();
@@ -412,5 +436,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Consultar_Modificar_Cliente;
+        private System.Windows.Forms.Button Back;
     }
 }

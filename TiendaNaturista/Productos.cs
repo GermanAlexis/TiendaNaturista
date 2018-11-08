@@ -36,5 +36,12 @@ namespace TiendaNaturista
             LP.BuscarProducto(Codigo);
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Form back = new Menu();
+            back.Show();
+            this.Hide();
+        }
     }
 }
