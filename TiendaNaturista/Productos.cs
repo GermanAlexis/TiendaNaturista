@@ -12,9 +12,11 @@ namespace TiendaNaturista
 {
     public partial class Productos : Form
     {
+        Logica.LogicaProductos LP = new Logica.LogicaProductos();
         public Productos()
         {
             InitializeComponent();
+            LP.MostrarProductos(this.MostrarProductos);
         }
 
         private void SaveProduc_Click(object sender, EventArgs e)
@@ -24,10 +26,15 @@ namespace TiendaNaturista
             string ValorProducto = ValorProduc.Text;
             string CantidadProducto = CantidadProduc.Text;
 
-            Logica.LogicaProductos LP = new Logica.LogicaProductos();
-
             LP.InsertarProducto(CodigoProducto, DescripcionProducto, ValorProducto, CantidadProducto);
         }
 
+        private void BtnConsultarPro_Click(object sender, EventArgs e)
+        {
+            int Codigo = Int32.Parse(ConsultarPro.Text);
+
+            LP.BuscarProducto(Codigo);
+
+        }
     }
 }
