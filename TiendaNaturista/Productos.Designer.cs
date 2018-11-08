@@ -56,6 +56,7 @@ namespace TiendaNaturista
             this.CodigoPro_Consulta = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.ConfirmaPro_Consulta = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
             this.DatosProductos.SuspendLayout();
@@ -310,12 +311,24 @@ namespace TiendaNaturista
             this.ConfirmaPro_Consulta.Text = "Confirmar";
             this.ConfirmaPro_Consulta.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(372, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(239, 29);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Gestion de Productos";
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(715, 455);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.IngresarPro);
             this.Name = "Productos";
             this.Text = "Productos";
@@ -326,6 +339,7 @@ namespace TiendaNaturista
             this.DatosProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -360,5 +374,6 @@ namespace TiendaNaturista
         private System.Windows.Forms.TextBox DescripcionPro_Consulta;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Button ConfirmaPro_Consulta;
+        private Label label9;
     }
 }
