@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,11 @@ namespace TiendaNaturista
         {
             int Codigo = Int32.Parse(CodigoPro_Consulta.Text);
 
-            LP.BuscarProducto(Codigo);
+            SqlDataReader sdr = LP.BuscarProductos(Codigo);
 
+            DescripcionSearch.Text = sdr.GetString(1);
+            ValorSearch.Text = sdr.GetDouble(2).ToString();
+            CantidadSearch.Text = sdr.GetInt32(3).ToString();
         }
 
         private void Back_Click(object sender, EventArgs e)
