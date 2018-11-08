@@ -147,21 +147,25 @@ namespace TiendaNaturista
             // 
             // ClearPro
             // 
+            this.ClearPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClearPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearPro.Location = new System.Drawing.Point(167, 187);
             this.ClearPro.Name = "ClearPro";
             this.ClearPro.Size = new System.Drawing.Size(94, 30);
             this.ClearPro.TabIndex = 5;
             this.ClearPro.Text = "Limpiar ";
-            this.ClearPro.UseVisualStyleBackColor = true;
+            this.ClearPro.UseVisualStyleBackColor = false;
             // 
             // SaveProduc
             // 
+            this.SaveProduc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SaveProduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveProduc.Location = new System.Drawing.Point(371, 187);
             this.SaveProduc.Name = "SaveProduc";
             this.SaveProduc.Size = new System.Drawing.Size(144, 30);
             this.SaveProduc.TabIndex = 4;
             this.SaveProduc.Text = "Guardar Producto";
-            this.SaveProduc.UseVisualStyleBackColor = true;
+            this.SaveProduc.UseVisualStyleBackColor = false;
             this.SaveProduc.Click += new System.EventHandler(this.SaveProduc_Click);
             // 
             // CantidadPro_Ingresar
@@ -217,22 +221,25 @@ namespace TiendaNaturista
             // 
             // ConsultarPro
             // 
+            this.ConsultarPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ConsultarPro.Location = new System.Drawing.Point(354, 20);
             this.ConsultarPro.Name = "ConsultarPro";
             this.ConsultarPro.Size = new System.Drawing.Size(169, 24);
             this.ConsultarPro.TabIndex = 14;
             this.ConsultarPro.Text = "Consultar Producto";
-            this.ConsultarPro.UseVisualStyleBackColor = true;
+            this.ConsultarPro.UseVisualStyleBackColor = false;
             this.ConsultarPro.Click += new System.EventHandler(this.ConsultarPro_Click);
             // 
             // ConfirmarPro
             // 
+            this.ConfirmarPro.BackColor = System.Drawing.Color.Brown;
+            this.ConfirmarPro.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ConfirmarPro.Location = new System.Drawing.Point(130, 314);
             this.ConfirmarPro.Name = "ConfirmarPro";
             this.ConfirmarPro.Size = new System.Drawing.Size(114, 35);
             this.ConfirmarPro.TabIndex = 13;
             this.ConfirmarPro.Text = "Aceptar";
-            this.ConfirmarPro.UseVisualStyleBackColor = true;
+            this.ConfirmarPro.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -370,6 +377,7 @@ namespace TiendaNaturista
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Atras);
             this.Controls.Add(this.IngresarPro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Productos";

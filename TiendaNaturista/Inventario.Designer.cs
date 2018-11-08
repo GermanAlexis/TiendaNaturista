@@ -35,6 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ConsultarInv = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Descripcion_Table_Inv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor_Table_Inv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad_Table_Inv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -83,18 +88,49 @@
             // ConsultarInv
             // 
             this.ConsultarInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ConsultarInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConsultarInv.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultarInv.ForeColor = System.Drawing.Color.Black;
             this.ConsultarInv.Location = new System.Drawing.Point(152, 127);
             this.ConsultarInv.Name = "ConsultarInv";
             this.ConsultarInv.Size = new System.Drawing.Size(158, 27);
             this.ConsultarInv.TabIndex = 4;
-            this.ConsultarInv.Text = "Imventariar";
+            this.ConsultarInv.Text = "Inventariar";
             this.ConsultarInv.UseVisualStyleBackColor = false;
             // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Descripcion_Table_Inv,
+            this.Valor_Table_Inv,
+            this.Cantidad_Table_Inv});
+            this.dataGridView1.Location = new System.Drawing.Point(75, 192);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(342, 134);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // Descripcion_Table_Inv
+            // 
+            this.Descripcion_Table_Inv.Frozen = true;
+            this.Descripcion_Table_Inv.HeaderText = "Descripcion";
+            this.Descripcion_Table_Inv.Name = "Descripcion_Table_Inv";
+            // 
+            // Valor_Table_Inv
+            // 
+            this.Valor_Table_Inv.Frozen = true;
+            this.Valor_Table_Inv.HeaderText = "Valor";
+            this.Valor_Table_Inv.Name = "Valor_Table_Inv";
+            // 
+            // Cantidad_Table_Inv
+            // 
+            this.Cantidad_Table_Inv.Frozen = true;
+            this.Cantidad_Table_Inv.HeaderText = "Cantidad";
+            this.Cantidad_Table_Inv.Name = "Cantidad_Table_Inv";
             // 
             // Inventario
             // 
@@ -103,13 +139,16 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(500, 352);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ConsultarInv);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inventario";
             this.Text = "Inventario";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +162,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ConsultarInv;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion_Table_Inv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_Table_Inv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Table_Inv;
     }
 }
