@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.User = new System.Windows.Forms.TextBox();
@@ -63,6 +64,7 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(164, 26);
             this.User.TabIndex = 1;
+            this.User.TextChanged += new System.EventHandler(this.User_TextChanged);
             // 
             // Passwork
             // 
@@ -111,6 +113,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.OrangeRed;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;

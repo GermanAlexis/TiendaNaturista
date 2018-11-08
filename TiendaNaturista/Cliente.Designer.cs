@@ -387,12 +387,14 @@
             this.Controls.Add(this.Back);
             this.Controls.Add(this.IngresarPro);
             this.Controls.Add(this.label5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cliente";
             this.ShowIcon = false;
             this.Text = "Cliente";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Cliente_Load);
             this.IngresarPro.ResumeLayout(false);
             this.IngresarCliente.ResumeLayout(false);
             this.IngresarCliente.PerformLayout();

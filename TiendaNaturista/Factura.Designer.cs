@@ -76,13 +76,15 @@
             // 
             // AddProduc
             // 
-            this.AddProduc.BackColor = System.Drawing.Color.Aquamarine;
-            this.AddProduc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddProduc.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.AddProduc.Location = new System.Drawing.Point(616, 85);
+            this.AddProduc.BackColor = System.Drawing.Color.LightGreen;
+            this.AddProduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddProduc.ForeColor = System.Drawing.Color.Blue;
+            this.AddProduc.Image = ((System.Drawing.Image)(resources.GetObject("AddProduc.Image")));
+            this.AddProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddProduc.Location = new System.Drawing.Point(605, 86);
             this.AddProduc.Margin = new System.Windows.Forms.Padding(4);
             this.AddProduc.Name = "AddProduc";
-            this.AddProduc.Size = new System.Drawing.Size(174, 42);
+            this.AddProduc.Size = new System.Drawing.Size(172, 42);
             this.AddProduc.TabIndex = 5;
             this.AddProduc.Text = "Agregar Producto";
             this.AddProduc.UseVisualStyleBackColor = false;
@@ -92,10 +94,12 @@
             this.TerminarFact.BackColor = System.Drawing.Color.Brown;
             this.TerminarFact.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TerminarFact.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TerminarFact.Image = ((System.Drawing.Image)(resources.GetObject("TerminarFact.Image")));
+            this.TerminarFact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TerminarFact.Location = new System.Drawing.Point(166, 342);
             this.TerminarFact.Margin = new System.Windows.Forms.Padding(4);
             this.TerminarFact.Name = "TerminarFact";
-            this.TerminarFact.Size = new System.Drawing.Size(190, 40);
+            this.TerminarFact.Size = new System.Drawing.Size(202, 40);
             this.TerminarFact.TabIndex = 6;
             this.TerminarFact.Text = "Terminar Factura";
             this.TerminarFact.UseVisualStyleBackColor = false;
@@ -236,6 +240,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.CodeFact);
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
