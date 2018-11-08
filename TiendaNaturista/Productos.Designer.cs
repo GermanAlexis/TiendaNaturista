@@ -1,4 +1,6 @@
-﻿namespace TiendaNaturista
+﻿using System.Windows.Forms;
+
+namespace TiendaNaturista
 {
     partial class Productos
     {
@@ -30,6 +32,7 @@
         {
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarProdcutos = new System.Windows.Forms.TabPage();
+            this.MostrarProductos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,10 +56,9 @@
             this.BtnConsultarPro = new System.Windows.Forms.Button();
             this.ConsultarPro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ConfirmarPro = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MostrarProductos)).BeginInit();
             this.DatosProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +93,14 @@
             this.IngresarProdcutos.Size = new System.Drawing.Size(656, 384);
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
+            // 
+            // MostrarProductos
+            // 
+            this.MostrarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MostrarProductos.Location = new System.Drawing.Point(34, 258);
+            this.MostrarProductos.Name = "MostrarProductos";
+            this.MostrarProductos.Size = new System.Drawing.Size(472, 120);
+            this.MostrarProductos.TabIndex = 13;
             // 
             // label4
             // 
@@ -178,7 +188,6 @@
             // DatosProductos
             // 
             this.DatosProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.DatosProductos.Controls.Add(this.ConfirmarPro);
             this.DatosProductos.Controls.Add(this.dataGridView1);
             this.DatosProductos.Controls.Add(this.textBox4);
             this.DatosProductos.Controls.Add(this.textBox3);
@@ -219,14 +228,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 25);
             this.textBox3.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(130, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 25);
-            this.textBox2.TabIndex = 9;
-            // 
+
             // EliminarConsulta
             // 
             this.EliminarConsulta.AutoSize = true;
@@ -282,6 +284,7 @@
             this.BtnConsultarPro.TabIndex = 2;
             this.BtnConsultarPro.Text = "Consultar";
             this.BtnConsultarPro.UseVisualStyleBackColor = true;
+            this.BtnConsultarPro.Click += new System.EventHandler(this.BtnConsultarPro_Click);
             // 
             // ConsultarPro
             // 
@@ -299,39 +302,20 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Codigo";
             // 
-            // ConfirmarPro
-            // 
-            this.ConfirmarPro.Location = new System.Drawing.Point(159, 319);
-            this.ConfirmarPro.Name = "ConfirmarPro";
-            this.ConfirmarPro.Size = new System.Drawing.Size(93, 30);
-            this.ConfirmarPro.TabIndex = 13;
-            this.ConfirmarPro.Text = "Confirmar";
-            this.ConfirmarPro.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poor Richard", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(341, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(219, 31);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Gestion  de Producto";
-            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(715, 455);
-            this.Controls.Add(this.label9);
+
             this.Controls.Add(this.IngresarPro);
             this.Name = "Productos";
             this.Text = "Productos";
             this.IngresarPro.ResumeLayout(false);
             this.IngresarProdcutos.ResumeLayout(false);
             this.IngresarProdcutos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MostrarProductos)).EndInit();
             this.DatosProductos.ResumeLayout(false);
             this.DatosProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -344,6 +328,9 @@
 
         private System.Windows.Forms.TabControl IngresarPro;
         private System.Windows.Forms.TabPage IngresarProdcutos;
+
+        public DataGridView MostrarProductos { get; private set; }
+
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -367,7 +354,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button ConfirmarPro;
-        private System.Windows.Forms.Label label9;
+
     }
 }
