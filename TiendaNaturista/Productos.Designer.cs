@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 ﻿using System.Windows.Forms;
 
+=======
+>>>>>>> Stashed changes
 namespace TiendaNaturista
 {
     partial class Productos
@@ -51,9 +54,12 @@ namespace TiendaNaturista
             this.DescripcionSearch = new System.Windows.Forms.TextBox();
             this.AceptarConsulta = new System.Windows.Forms.Button();
 =======
+<<<<<<< Updated upstream
             this.CantidadPro_Consulta = new System.Windows.Forms.TextBox();
             this.ValorPro_Consulta = new System.Windows.Forms.TextBox();
             this.DescripcionPro_Consulta = new System.Windows.Forms.TextBox();
+=======
+>>>>>>> Stashed changes
 >>>>>>> master
             this.EliminarConsulta = new System.Windows.Forms.CheckBox();
             this.ModificarConsulta = new System.Windows.Forms.CheckBox();
@@ -65,8 +71,11 @@ namespace TiendaNaturista
             this.label5 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
 =======
+<<<<<<< Updated upstream
             this.ConfirmaPro_Consulta = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+=======
+>>>>>>> Stashed changes
 >>>>>>> master
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
