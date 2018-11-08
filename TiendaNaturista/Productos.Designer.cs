@@ -34,6 +34,7 @@ namespace TiendaNaturista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarProdcutos = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,6 +64,7 @@ namespace TiendaNaturista
             this.label10 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.DatosProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +83,7 @@ namespace TiendaNaturista
             // IngresarProdcutos
             // 
             this.IngresarProdcutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.IngresarProdcutos.Controls.Add(this.dataGridView2);
             this.IngresarProdcutos.Controls.Add(this.label4);
             this.IngresarProdcutos.Controls.Add(this.label3);
             this.IngresarProdcutos.Controls.Add(this.label2);
@@ -98,10 +101,18 @@ namespace TiendaNaturista
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(86, 248);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(478, 121);
+            this.dataGridView2.TabIndex = 10;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(343, 159);
+            this.label4.Location = new System.Drawing.Point(343, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 9;
@@ -110,7 +121,7 @@ namespace TiendaNaturista
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(343, 67);
+            this.label3.Location = new System.Drawing.Point(343, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 8;
@@ -119,7 +130,7 @@ namespace TiendaNaturista
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 159);
+            this.label2.Location = new System.Drawing.Point(33, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 7;
@@ -128,7 +139,7 @@ namespace TiendaNaturista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 67);
+            this.label1.Location = new System.Drawing.Point(51, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 18);
             this.label1.TabIndex = 6;
@@ -136,7 +147,7 @@ namespace TiendaNaturista
             // 
             // ClearPro
             // 
-            this.ClearPro.Location = new System.Drawing.Point(173, 268);
+            this.ClearPro.Location = new System.Drawing.Point(167, 187);
             this.ClearPro.Name = "ClearPro";
             this.ClearPro.Size = new System.Drawing.Size(94, 30);
             this.ClearPro.TabIndex = 5;
@@ -145,7 +156,7 @@ namespace TiendaNaturista
             // 
             // SaveProduc
             // 
-            this.SaveProduc.Location = new System.Drawing.Point(378, 268);
+            this.SaveProduc.Location = new System.Drawing.Point(371, 187);
             this.SaveProduc.Name = "SaveProduc";
             this.SaveProduc.Size = new System.Drawing.Size(144, 30);
             this.SaveProduc.TabIndex = 4;
@@ -155,28 +166,28 @@ namespace TiendaNaturista
             // 
             // CantidadPro_Ingresar
             // 
-            this.CantidadPro_Ingresar.Location = new System.Drawing.Point(429, 152);
+            this.CantidadPro_Ingresar.Location = new System.Drawing.Point(429, 111);
             this.CantidadPro_Ingresar.Name = "CantidadPro_Ingresar";
             this.CantidadPro_Ingresar.Size = new System.Drawing.Size(123, 25);
             this.CantidadPro_Ingresar.TabIndex = 3;
             // 
             // ValorPro_Ingresar
             // 
-            this.ValorPro_Ingresar.Location = new System.Drawing.Point(429, 60);
+            this.ValorPro_Ingresar.Location = new System.Drawing.Point(429, 32);
             this.ValorPro_Ingresar.Name = "ValorPro_Ingresar";
             this.ValorPro_Ingresar.Size = new System.Drawing.Size(123, 25);
             this.ValorPro_Ingresar.TabIndex = 2;
             // 
             // DescripcionPro_Ingresar
             // 
-            this.DescripcionPro_Ingresar.Location = new System.Drawing.Point(138, 152);
+            this.DescripcionPro_Ingresar.Location = new System.Drawing.Point(138, 107);
             this.DescripcionPro_Ingresar.Name = "DescripcionPro_Ingresar";
             this.DescripcionPro_Ingresar.Size = new System.Drawing.Size(144, 25);
             this.DescripcionPro_Ingresar.TabIndex = 1;
             // 
             // CodePro_Ingresar
             // 
-            this.CodePro_Ingresar.Location = new System.Drawing.Point(138, 60);
+            this.CodePro_Ingresar.Location = new System.Drawing.Point(138, 32);
             this.CodePro_Ingresar.Name = "CodePro_Ingresar";
             this.CodePro_Ingresar.Size = new System.Drawing.Size(144, 25);
             this.CodePro_Ingresar.TabIndex = 0;
@@ -367,6 +378,7 @@ namespace TiendaNaturista
             this.IngresarPro.ResumeLayout(false);
             this.IngresarProdcutos.ResumeLayout(false);
             this.IngresarProdcutos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.DatosProductos.ResumeLayout(false);
             this.DatosProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -410,5 +422,6 @@ namespace TiendaNaturista
         private Button ConfirmarPro;
         private Button ConsultarPro;
         private Label label10;
+        private DataGridView dataGridView2;
     }
 }

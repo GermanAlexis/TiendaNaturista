@@ -34,7 +34,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ConsultarInv = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.SuspendLayout();
             // 
@@ -93,14 +92,6 @@
             this.ConsultarInv.Text = "Imventariar";
             this.ConsultarInv.UseVisualStyleBackColor = false;
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(75, 183);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(360, 124);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
@@ -112,7 +103,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(500, 352);
             this.ControlBox = false;
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.ConsultarInv);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
@@ -132,7 +122,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ConsultarInv;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
