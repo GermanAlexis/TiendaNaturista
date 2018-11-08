@@ -1,3 +1,4 @@
+
 ﻿using System.Windows.Forms;
 
 namespace TiendaNaturista
@@ -399,7 +400,6 @@ namespace TiendaNaturista
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox CodigoPro_Consulta;
         private System.Windows.Forms.Label label5;
-
         private System.Windows.Forms.TextBox CantidadSearch;
         private System.Windows.Forms.TextBox ValorSearch;
         private System.Windows.Forms.TextBox DescripcionSearch;

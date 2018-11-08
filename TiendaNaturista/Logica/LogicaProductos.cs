@@ -67,7 +67,7 @@ namespace TiendaNaturista.Logica
             }
         }
 
-        /*public void BuscarProducto(int Codigo)
+        public void BuscarProducto(int Codigo)
         {
             try
             {
@@ -79,13 +79,7 @@ namespace TiendaNaturista.Logica
 
                 if (dr.Read())
                 {
-                    //MessageBox.Show(dr.GetInt32(0).ToString());
-                    DatosProductos[0] = dr.GetInt32(0).ToString();
-                    DatosProductos[1] = dr.GetString(1);
-                    DatosProductos[2] = dr.GetFloat(2).ToString();
-                    DatosProductos[3] = dr.GetInt32(3).ToString();
-
-                    MessageBox.Show(DatosProductos[1]);
+                    MessageBox.Show(dr.GetInt32(1).ToString());
 
                 }
                 else {
@@ -102,7 +96,7 @@ namespace TiendaNaturista.Logica
             }
         }
 
-        public SqlDataReader BuscarProductos(int Codigo)
+        /*public SqlDataReader BuscarProductos(int Codigo)
         {
             Con.Conectar();
             string sql = "SELECT * FROM Productos where Pro_Code=@Code";
