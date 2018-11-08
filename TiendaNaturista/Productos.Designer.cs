@@ -45,7 +45,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.AceptarConsulta = new System.Windows.Forms.Button();
             this.EliminarConsulta = new System.Windows.Forms.CheckBox();
             this.ModificarConsulta = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +53,8 @@
             this.BtnConsultarPro = new System.Windows.Forms.Button();
             this.ConsultarPro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ConfirmarPro = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.IngresarPro.SuspendLayout();
             this.IngresarProdcutos.SuspendLayout();
             this.DatosProductos.SuspendLayout();
@@ -69,11 +69,12 @@
             this.IngresarPro.Location = new System.Drawing.Point(13, 28);
             this.IngresarPro.Name = "IngresarPro";
             this.IngresarPro.SelectedIndex = 0;
-            this.IngresarPro.Size = new System.Drawing.Size(664, 412);
+            this.IngresarPro.Size = new System.Drawing.Size(664, 415);
             this.IngresarPro.TabIndex = 2;
             // 
             // IngresarProdcutos
             // 
+            this.IngresarProdcutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.IngresarProdcutos.Controls.Add(this.label4);
             this.IngresarProdcutos.Controls.Add(this.label3);
             this.IngresarProdcutos.Controls.Add(this.label2);
@@ -87,15 +88,14 @@
             this.IngresarProdcutos.Location = new System.Drawing.Point(4, 27);
             this.IngresarProdcutos.Name = "IngresarProdcutos";
             this.IngresarProdcutos.Padding = new System.Windows.Forms.Padding(3);
-            this.IngresarProdcutos.Size = new System.Drawing.Size(656, 381);
+            this.IngresarProdcutos.Size = new System.Drawing.Size(656, 384);
             this.IngresarProdcutos.TabIndex = 0;
             this.IngresarProdcutos.Text = "Ingresar Producto";
-            this.IngresarProdcutos.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 198);
+            this.label4.Location = new System.Drawing.Point(343, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 9;
@@ -104,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 147);
+            this.label3.Location = new System.Drawing.Point(343, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 18);
             this.label3.TabIndex = 8;
@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 87);
+            this.label2.Location = new System.Drawing.Point(28, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 7;
@@ -122,7 +122,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 30);
+            this.label1.Location = new System.Drawing.Point(50, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 18);
             this.label1.TabIndex = 6;
@@ -130,7 +130,7 @@
             // 
             // ClearPro
             // 
-            this.ClearPro.Location = new System.Drawing.Point(315, 147);
+            this.ClearPro.Location = new System.Drawing.Point(173, 268);
             this.ClearPro.Name = "ClearPro";
             this.ClearPro.Size = new System.Drawing.Size(94, 23);
             this.ClearPro.TabIndex = 5;
@@ -139,7 +139,7 @@
             // 
             // SaveProduc
             // 
-            this.SaveProduc.Location = new System.Drawing.Point(315, 55);
+            this.SaveProduc.Location = new System.Drawing.Point(378, 268);
             this.SaveProduc.Name = "SaveProduc";
             this.SaveProduc.Size = new System.Drawing.Size(144, 23);
             this.SaveProduc.TabIndex = 4;
@@ -149,40 +149,40 @@
             // 
             // CantidadProduc
             // 
-            this.CantidadProduc.Location = new System.Drawing.Point(138, 198);
+            this.CantidadProduc.Location = new System.Drawing.Point(429, 152);
             this.CantidadProduc.Name = "CantidadProduc";
-            this.CantidadProduc.Size = new System.Drawing.Size(100, 25);
+            this.CantidadProduc.Size = new System.Drawing.Size(123, 25);
             this.CantidadProduc.TabIndex = 3;
             // 
             // ValorProduc
             // 
-            this.ValorProduc.Location = new System.Drawing.Point(138, 147);
+            this.ValorProduc.Location = new System.Drawing.Point(429, 60);
             this.ValorProduc.Name = "ValorProduc";
-            this.ValorProduc.Size = new System.Drawing.Size(100, 25);
+            this.ValorProduc.Size = new System.Drawing.Size(123, 25);
             this.ValorProduc.TabIndex = 2;
             // 
             // DescriProdc
             // 
-            this.DescriProdc.Location = new System.Drawing.Point(138, 87);
+            this.DescriProdc.Location = new System.Drawing.Point(138, 152);
             this.DescriProdc.Name = "DescriProdc";
             this.DescriProdc.Size = new System.Drawing.Size(144, 25);
             this.DescriProdc.TabIndex = 1;
             // 
             // CodeProduc
             // 
-            this.CodeProduc.Location = new System.Drawing.Point(138, 30);
+            this.CodeProduc.Location = new System.Drawing.Point(138, 60);
             this.CodeProduc.Name = "CodeProduc";
-            this.CodeProduc.Size = new System.Drawing.Size(100, 25);
+            this.CodeProduc.Size = new System.Drawing.Size(144, 25);
             this.CodeProduc.TabIndex = 0;
             // 
             // DatosProductos
             // 
-            this.DatosProductos.Controls.Add(this.button1);
+            this.DatosProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.DatosProductos.Controls.Add(this.ConfirmarPro);
             this.DatosProductos.Controls.Add(this.dataGridView1);
             this.DatosProductos.Controls.Add(this.textBox4);
             this.DatosProductos.Controls.Add(this.textBox3);
             this.DatosProductos.Controls.Add(this.textBox2);
-            this.DatosProductos.Controls.Add(this.AceptarConsulta);
             this.DatosProductos.Controls.Add(this.EliminarConsulta);
             this.DatosProductos.Controls.Add(this.ModificarConsulta);
             this.DatosProductos.Controls.Add(this.label8);
@@ -194,10 +194,9 @@
             this.DatosProductos.Location = new System.Drawing.Point(4, 27);
             this.DatosProductos.Name = "DatosProductos";
             this.DatosProductos.Padding = new System.Windows.Forms.Padding(3);
-            this.DatosProductos.Size = new System.Drawing.Size(656, 381);
+            this.DatosProductos.Size = new System.Drawing.Size(656, 384);
             this.DatosProductos.TabIndex = 1;
             this.DatosProductos.Text = "Datos Productos";
-            this.DatosProductos.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -227,15 +226,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 25);
             this.textBox2.TabIndex = 9;
-            // 
-            // AceptarConsulta
-            // 
-            this.AceptarConsulta.Location = new System.Drawing.Point(214, 319);
-            this.AceptarConsulta.Name = "AceptarConsulta";
-            this.AceptarConsulta.Size = new System.Drawing.Size(76, 30);
-            this.AceptarConsulta.TabIndex = 8;
-            this.AceptarConsulta.Text = "Aceptar";
-            this.AceptarConsulta.UseVisualStyleBackColor = true;
             // 
             // EliminarConsulta
             // 
@@ -309,20 +299,33 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Codigo";
             // 
-            // button1
+            // ConfirmarPro
             // 
-            this.button1.Location = new System.Drawing.Point(96, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ConfirmarPro.Location = new System.Drawing.Point(159, 319);
+            this.ConfirmarPro.Name = "ConfirmarPro";
+            this.ConfirmarPro.Size = new System.Drawing.Size(93, 30);
+            this.ConfirmarPro.TabIndex = 13;
+            this.ConfirmarPro.Text = "Confirmar";
+            this.ConfirmarPro.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poor Richard", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(341, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(219, 31);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Gestion  de Producto";
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(715, 455);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.IngresarPro);
             this.Name = "Productos";
             this.Text = "Productos";
@@ -333,6 +336,7 @@
             this.DatosProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,7 +355,6 @@
         private System.Windows.Forms.TextBox DescriProdc;
         private System.Windows.Forms.TextBox CodeProduc;
         private System.Windows.Forms.TabPage DatosProductos;
-        private System.Windows.Forms.Button AceptarConsulta;
         private System.Windows.Forms.CheckBox EliminarConsulta;
         private System.Windows.Forms.CheckBox ModificarConsulta;
         private System.Windows.Forms.Label label8;
@@ -364,6 +367,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ConfirmarPro;
+        private System.Windows.Forms.Label label9;
     }
 }
