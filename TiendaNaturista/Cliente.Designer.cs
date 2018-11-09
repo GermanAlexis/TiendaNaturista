@@ -290,6 +290,7 @@
             this.Guardar_Cliente.TabIndex = 9;
             this.Guardar_Cliente.Text = "Guardar";
             this.Guardar_Cliente.UseVisualStyleBackColor = true;
+            this.Guardar_Cliente.Click += new System.EventHandler(this.Guardar_Cliente_Click);
             // 
             // PhoneMod
             // 
@@ -350,6 +351,7 @@
             this.Consultar_Modificar_Cliente.TabIndex = 2;
             this.Consultar_Modificar_Cliente.Text = "Consultar";
             this.Consultar_Modificar_Cliente.UseVisualStyleBackColor = true;
+            this.Consultar_Modificar_Cliente.Click += new System.EventHandler(this.Consultar_Modificar_Cliente_Click);
             // 
             // DocumentConsulta
             // 
