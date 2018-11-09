@@ -257,6 +257,7 @@
             this.ModificarCli.TabIndex = 3;
             this.ModificarCli.Text = "Modificar";
             this.ModificarCli.UseVisualStyleBackColor = true;
+            this.ModificarCli.CheckedChanged += new System.EventHandler(this.ModificarCli_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -316,7 +317,6 @@
             this.NameMod.Name = "NameMod";
             this.NameMod.Size = new System.Drawing.Size(158, 25);
             this.NameMod.TabIndex = 5;
-            this.NameMod.Visible = false;
             // 
             // label10
             // 

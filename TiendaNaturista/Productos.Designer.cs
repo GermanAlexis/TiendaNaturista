@@ -264,7 +264,6 @@ namespace TiendaNaturista
             this.DescripcionSearch.Size = new System.Drawing.Size(303, 25);
             this.DescripcionSearch.TabIndex = 9;
             this.DescripcionSearch.WordWrap = false;
-            this.DescripcionSearch.TextChanged += new System.EventHandler(this.DescripcionSearch_TextChanged);
             // 
             // EliminarConsulta
             // 

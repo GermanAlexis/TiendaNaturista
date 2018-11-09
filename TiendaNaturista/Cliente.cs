@@ -19,7 +19,7 @@ namespace TiendaNaturista
 
         private void SaveClient_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola cole");
+            MessageBox.Show("Guardado Exitosamente");
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -29,6 +29,23 @@ namespace TiendaNaturista
             this.Hide();
         }
 
-        
+        private void ModificarCli_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ModificarCli.Checked == true)
+            {
+                NameMod.Enabled = true;
+                AddresMod.Enabled = true;
+                PhoneMod.Enabled = true;
+                EmailMod.Enabled = true;
+            }
+            else if (ModificarCli.Checked == false)
+            {
+                NameMod.Enabled = false;
+                AddresMod.Enabled = false;
+                PhoneMod.Enabled = false;
+                EmailMod.Enabled = false;
+            }
+
+        }
     }
 }
