@@ -41,37 +41,12 @@ namespace TiendaNaturista
 
         private void ConsultarPro_Click(object sender, EventArgs e)
         {
-            int Codigo = int.Parse(CodigoPro_Consulta.Text);
-
-            try
-            {
-                Con.Conectar();
-                string sql = "SELECT * FROM Productos where Pro_Code=@Code";
-                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
-                cmd.Parameters.AddWithValue("@Code", Codigo);
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    DescripcionSearch.Text = dr.GetString(1);
-                    ValorSearch.Text = dr.GetDouble(2).ToString();
-                    CantidadSearch.Text = dr.GetInt32(3).ToString();
-
-                }
-                else
-                {
-                    MessageBox.Show("No existe un producto con este codigo");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Con.Desconectar();
-            }
+            string[] vector;
+            vector = new string[4];
+            vector = LP.BuscarProducto(CodigoPro_Consulta.Text);
+            DescripcionSearch.Text = vector[1];
+            ValorSearch.Text = vector[2];
+            CantidadSearch.Text = vector[3];
         }
 
         private void ConfirmarPro_Click(object sender, EventArgs e)
@@ -80,17 +55,21 @@ namespace TiendaNaturista
             string Descripcion = DescripcionSearch.Text;
             string Valor = ValorSearch.Text;
             string Cantidad = CantidadSearch.Text;
-
-
             int Codigo = Int32.Parse(CodigoPro_Consulta.Text);
             if (EliminarConsulta.Checked)
             {
                 LP.ElminarProducto(Codigo);
-            } else if (ModificarConsulta.Checked)
+            }
+            else if (ModificarConsulta.Checked)
             {
                 LP.ActualizarProducto(CodigoP, Descripcion, Valor, Cantidad);
             }
-            
+            CodigoPro_Consulta.Text = "";
+            DescripcionSearch.Text = "";
+            ValorSearch.Text = "";
+            CantidadSearch.Text = "";
+            CodigoPro_Consulta.Focus();
+            LP.MostrarProductos(this.MostrarTodosProducto);
         }
 
         private void ClearPro_Click(object sender, EventArgs e)

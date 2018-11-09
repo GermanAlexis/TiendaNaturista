@@ -65,6 +65,7 @@
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\LogicaCliente.cs" />
     <Compile Include="Logica\LogicaFactura.cs" />
     <Compile Include="Logica\LogicaProductos.cs" />
     <Compile Include="Login.cs">

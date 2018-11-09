@@ -126,5 +126,41 @@ namespace TiendaNaturista.Logica
                 Con.Desconectar();
             }
         }
+        public string[] BuscarProducto(string ID_Producto)
+        {
+            string[] dat;
+            dat = new string[4];
+            try
+            {
+
+                Con.Conectar();
+                String sql = "SELECT * FROM Productos WHERE Pro_Code=@ID_pro";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
+                cmd.Parameters.AddWithValue("@ID_pro", ID_Producto);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dat[0] = dr.GetInt32(0).ToString();
+                    dat[1] = dr.GetString(1);
+                    dat[2] = dr.GetDouble(2).ToString();
+                    dat[3] = dr.GetInt32(3).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No se encuentra el Producto");
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                Con.Desconectar();
+            }
+            return dat;
+        }
     }
 }
