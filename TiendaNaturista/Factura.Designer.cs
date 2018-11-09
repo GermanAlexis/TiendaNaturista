@@ -40,15 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DetalleCarrito = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.comboBox_Cliente = new System.Windows.Forms.ComboBox();
             this.comboBoxProducto = new System.Windows.Forms.ComboBox();
             this.Back = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.GeneraFac = new System.Windows.Forms.Button();
             this.comboBoxVendedor = new System.Windows.Forms.ComboBox();
+            this.ValorTotalFactura = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleCarrito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // CodeFact
@@ -107,6 +106,7 @@
             this.TerminarFact.TabIndex = 6;
             this.TerminarFact.Text = "Terminar Factura";
             this.TerminarFact.UseVisualStyleBackColor = false;
+            this.TerminarFact.Click += new System.EventHandler(this.TerminarFact_Click);
             // 
             // label1
             // 
@@ -171,15 +171,6 @@
             this.DetalleCarrito.TabIndex = 17;
             this.DetalleCarrito.TabStop = false;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(540, 264);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(259, 40);
-            this.dataGridView2.TabIndex = 18;
-            this.dataGridView2.TabStop = false;
-            // 
             // comboBox_Cliente
             // 
             this.comboBox_Cliente.FormattingEnabled = true;
@@ -240,6 +231,14 @@
             this.comboBoxVendedor.Size = new System.Drawing.Size(232, 26);
             this.comboBoxVendedor.TabIndex = 23;
             // 
+            // ValorTotalFactura
+            // 
+            this.ValorTotalFactura.Location = new System.Drawing.Point(523, 276);
+            this.ValorTotalFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.ValorTotalFactura.Name = "ValorTotalFactura";
+            this.ValorTotalFactura.Size = new System.Drawing.Size(148, 25);
+            this.ValorTotalFactura.TabIndex = 24;
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -247,13 +246,13 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(811, 420);
             this.ControlBox = false;
+            this.Controls.Add(this.ValorTotalFactura);
             this.Controls.Add(this.comboBoxVendedor);
             this.Controls.Add(this.GeneraFac);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.comboBoxProducto);
             this.Controls.Add(this.comboBox_Cliente);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.DetalleCarrito);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -273,7 +272,6 @@
             this.Name = "Factura";
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.DetalleCarrito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,12 +290,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView DetalleCarrito;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox_Cliente;
         private System.Windows.Forms.ComboBox comboBoxProducto;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button GeneraFac;
         private System.Windows.Forms.ComboBox comboBoxVendedor;
+        private System.Windows.Forms.TextBox ValorTotalFactura;
     }
 }
