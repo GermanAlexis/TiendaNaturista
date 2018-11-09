@@ -32,6 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarCliente = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Email = new System.Windows.Forms.TextBox();
             this.correo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.ConsultarCliente = new System.Windows.Forms.TabPage();
             this.ClearClie = new System.Windows.Forms.CheckBox();
             this.ModificarCli = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.EmailMod = new System.Windows.Forms.TextBox();
             this.Guardar_Cliente = new System.Windows.Forms.Button();
@@ -61,12 +61,10 @@
             this.DocumentConsulta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.IngresarPro.SuspendLayout();
             this.IngresarCliente.SuspendLayout();
-            this.ConsultarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.ConsultarCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -114,6 +112,14 @@
             this.IngresarCliente.TabIndex = 0;
             this.IngresarCliente.Text = "Ingresar Cliente";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(281, 205);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(263, 136);
+            this.dataGridView2.TabIndex = 11;
+            // 
             // Email
             // 
             this.Email.Location = new System.Drawing.Point(138, 141);
@@ -133,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(315, 119);
+            this.label4.Location = new System.Drawing.Point(314, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 9;
@@ -174,6 +180,7 @@
             this.ClearClient.TabIndex = 8;
             this.ClearClient.Text = "Limpiar ";
             this.ClearClient.UseVisualStyleBackColor = true;
+            this.ClearClient.Click += new System.EventHandler(this.ClearClient_Click);
             // 
             // SaveClient
             // 
@@ -187,7 +194,7 @@
             // 
             // PhoneClient
             // 
-            this.PhoneClient.Location = new System.Drawing.Point(400, 116);
+            this.PhoneClient.Location = new System.Drawing.Point(400, 92);
             this.PhoneClient.Name = "PhoneClient";
             this.PhoneClient.Size = new System.Drawing.Size(144, 25);
             this.PhoneClient.TabIndex = 5;
@@ -218,7 +225,6 @@
             this.ConsultarCliente.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ConsultarCliente.Controls.Add(this.ClearClie);
             this.ConsultarCliente.Controls.Add(this.ModificarCli);
-            this.ConsultarCliente.Controls.Add(this.dataGridView1);
             this.ConsultarCliente.Controls.Add(this.label11);
             this.ConsultarCliente.Controls.Add(this.EmailMod);
             this.ConsultarCliente.Controls.Add(this.Guardar_Cliente);
@@ -241,7 +247,7 @@
             // ClearClie
             // 
             this.ClearClie.AutoSize = true;
-            this.ClearClie.Location = new System.Drawing.Point(174, 105);
+            this.ClearClie.Location = new System.Drawing.Point(334, 105);
             this.ClearClie.Name = "ClearClie";
             this.ClearClie.Size = new System.Drawing.Size(87, 22);
             this.ClearClie.TabIndex = 4;
@@ -251,21 +257,13 @@
             // ModificarCli
             // 
             this.ModificarCli.AutoSize = true;
-            this.ModificarCli.Location = new System.Drawing.Point(59, 105);
+            this.ModificarCli.Location = new System.Drawing.Point(152, 105);
             this.ModificarCli.Name = "ModificarCli";
             this.ModificarCli.Size = new System.Drawing.Size(92, 22);
             this.ModificarCli.TabIndex = 3;
             this.ModificarCli.Text = "Modificar";
             this.ModificarCli.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(326, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(217, 213);
-            this.dataGridView1.TabIndex = 21;
-            this.dataGridView1.TabStop = false;
+            this.ModificarCli.CheckedChanged += new System.EventHandler(this.ModificarCli_CheckedChanged);
             // 
             // label11
             // 
@@ -281,12 +279,12 @@
             this.EmailMod.Enabled = false;
             this.EmailMod.Location = new System.Drawing.Point(123, 266);
             this.EmailMod.Name = "EmailMod";
-            this.EmailMod.Size = new System.Drawing.Size(158, 25);
+            this.EmailMod.Size = new System.Drawing.Size(310, 25);
             this.EmailMod.TabIndex = 8;
             // 
             // Guardar_Cliente
             // 
-            this.Guardar_Cliente.Location = new System.Drawing.Point(123, 305);
+            this.Guardar_Cliente.Location = new System.Drawing.Point(202, 306);
             this.Guardar_Cliente.Name = "Guardar_Cliente";
             this.Guardar_Cliente.Size = new System.Drawing.Size(125, 30);
             this.Guardar_Cliente.TabIndex = 9;
@@ -298,7 +296,7 @@
             this.PhoneMod.Enabled = false;
             this.PhoneMod.Location = new System.Drawing.Point(123, 225);
             this.PhoneMod.Name = "PhoneMod";
-            this.PhoneMod.Size = new System.Drawing.Size(158, 25);
+            this.PhoneMod.Size = new System.Drawing.Size(310, 25);
             this.PhoneMod.TabIndex = 7;
             // 
             // AddresMod
@@ -306,7 +304,7 @@
             this.AddresMod.Enabled = false;
             this.AddresMod.Location = new System.Drawing.Point(123, 189);
             this.AddresMod.Name = "AddresMod";
-            this.AddresMod.Size = new System.Drawing.Size(158, 25);
+            this.AddresMod.Size = new System.Drawing.Size(310, 25);
             this.AddresMod.TabIndex = 6;
             // 
             // NameMod
@@ -314,9 +312,8 @@
             this.NameMod.Enabled = false;
             this.NameMod.Location = new System.Drawing.Point(123, 148);
             this.NameMod.Name = "NameMod";
-            this.NameMod.Size = new System.Drawing.Size(158, 25);
+            this.NameMod.Size = new System.Drawing.Size(310, 25);
             this.NameMod.TabIndex = 5;
-            this.NameMod.Visible = false;
             // 
             // label10
             // 
@@ -385,14 +382,6 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(281, 205);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(263, 136);
-            this.dataGridView2.TabIndex = 11;
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,16 +396,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cliente";
-            this.ShowIcon = false;
             this.Text = "Cliente";
             this.TopMost = true;
             this.IngresarPro.ResumeLayout(false);
             this.IngresarCliente.ResumeLayout(false);
             this.IngresarCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ConsultarCliente.ResumeLayout(false);
             this.ConsultarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,7 +430,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox ClearClie;
         private System.Windows.Forms.CheckBox ModificarCli;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox EmailMod;
         private System.Windows.Forms.Button Guardar_Cliente;
