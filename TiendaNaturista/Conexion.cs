@@ -29,8 +29,11 @@ namespace WindowsFormsApp
         {
             Con.Close();
         }
+        public SqlCommand Create()
+        {
+           return  Con.CreateCommand();
+        }
 
-        //funcion que devuelve la conexion sqlserver
         public SqlConnection Conex()
         {
             return Con;
