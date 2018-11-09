@@ -147,11 +147,11 @@ namespace TiendaNaturista.Logica
 
                 if (result == 1)
                 {
-                    MessageBox.Show("Producto eliminado exitosamente");
+                    MessageBox.Show("Cliente eliminado exitosamente");
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo eliminar el producto. Intente mas tarde");
+                    MessageBox.Show("No se pudo eliminar el Cliente. Intente mas tarde");
                 }
             }
             catch (Exception ex)
