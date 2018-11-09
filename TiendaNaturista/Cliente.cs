@@ -47,5 +47,14 @@ namespace TiendaNaturista
             }
 
         }
+
+        private void ClearClient_Click(object sender, EventArgs e)
+        {
+            Document.Clear();
+            NameClient.Clear();
+            PhoneClient.Clear();
+            Email.Clear();
+            AddresClient.Clear();
+        }
     }
 }
