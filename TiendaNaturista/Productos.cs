@@ -99,6 +99,7 @@ namespace TiendaNaturista
             DescripcionPro_Ingresar.Clear();
             ValorPro_Ingresar.Clear();
             CantidadPro_Ingresar.Clear();
+            
         }
 
         private void ModificarConsulta_CheckedChanged(object sender, EventArgs e)

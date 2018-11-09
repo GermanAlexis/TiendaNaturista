@@ -376,7 +376,6 @@ namespace TiendaNaturista
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Productos";
-            this.ShowIcon = false;
             this.Text = "Productos";
             this.IngresarPro.ResumeLayout(false);
             this.IngresarProdcutos.ResumeLayout(false);

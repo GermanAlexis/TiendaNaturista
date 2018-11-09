@@ -32,6 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.IngresarPro = new System.Windows.Forms.TabControl();
             this.IngresarCliente = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Email = new System.Windows.Forms.TextBox();
             this.correo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,11 +61,10 @@
             this.DocumentConsulta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.IngresarPro.SuspendLayout();
             this.IngresarCliente.SuspendLayout();
-            this.ConsultarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.ConsultarCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -111,6 +111,14 @@
             this.IngresarCliente.Size = new System.Drawing.Size(579, 368);
             this.IngresarCliente.TabIndex = 0;
             this.IngresarCliente.Text = "Ingresar Cliente";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(281, 205);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(263, 136);
+            this.dataGridView2.TabIndex = 11;
             // 
             // Email
             // 
@@ -374,14 +382,6 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(281, 205);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(263, 136);
-            this.dataGridView2.TabIndex = 11;
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,15 +396,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Cliente";
-            this.ShowIcon = false;
             this.Text = "Cliente";
             this.TopMost = true;
             this.IngresarPro.ResumeLayout(false);
             this.IngresarCliente.ResumeLayout(false);
             this.IngresarCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ConsultarCliente.ResumeLayout(false);
             this.ConsultarCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

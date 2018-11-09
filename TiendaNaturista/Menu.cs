@@ -58,6 +58,7 @@ namespace TiendaNaturista
         private void cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
     }
 }
