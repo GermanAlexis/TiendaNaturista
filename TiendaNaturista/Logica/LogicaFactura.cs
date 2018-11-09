@@ -122,16 +122,18 @@ namespace TiendaNaturista.Logica
             }
         }
 
-        public void LlenarDetallefactura(string CodigoFactura, string CodigoProducto, string Cantidad)
+        public void LlenarDetallefactura(string CodigoFactura, string CodigoProducto, string Cantidad, string Subtotal)
         {
             try
             {
                 Con.Conectar();
-                string sql = "INSERT INTO Detalle_Factura VALUES(@CodeFac, @CodeProduc, @CantidadProduc)";
+                string sql = "INSERT INTO Detalle_Factura VALUES(@CodeFac, @CodeProduc, @CantidadProduc, @SubtotalProduc)";
                 SqlCommand cmd = new SqlCommand(sql, Con.Conex());
                 cmd.Parameters.AddWithValue("@CodeFac", CodigoFactura);
                 cmd.Parameters.AddWithValue("@CodeProduc", CodigoProducto);
                 cmd.Parameters.AddWithValue("@CantidadProduc", Cantidad);
+                cmd.Parameters.AddWithValue("@SubtotalProduc", Subtotal);
+                
                 int result = cmd.ExecuteNonQuery();
 
                 if (result == 1)
@@ -155,16 +157,84 @@ namespace TiendaNaturista.Logica
             }
         }
 
-        public void MostrarCarritoFactura(DataGridView dataGridView, string CodigoFactura)
+        public void MostrarCarritoFactura(DataGridView dataGridView, int CodigoFactura)
         {
             try
             {
                 Con.Conectar();
-                string sql = "SELECT * FROM Productos WHERE DFac_Number = "+CodigoFactura+"";
-                SqlDataAdapter cmd = new SqlDataAdapter(sql, Con.Conex());
+                string sql = "SELECT * FROM  Detalle_Factura WHERE DFac_Number = '" + CodigoFactura +"'";
+                SqlCommand cmd = Con.Create();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
                 DataTable DT = new DataTable();
-                cmd.Fill(DT);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(DT);
                 dataGridView.DataSource = DT;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                Con.Desconectar();
+            }
+        }
+
+        public string [] ValorProducto(int Codigo)
+        {
+            string[] dat = new string[1];
+            Con.Conectar();
+
+            try
+            {
+                String sql = "SELECT Pro_Valor FROM Productos Prod WHERE Pro_Code=@CodigoPro";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
+                cmd.Parameters.AddWithValue("@CodigoPro", Codigo);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dat[0] = dr.GetDouble(0).ToString();                  
+                }
+                else
+                {
+                    MessageBox.Show("No se encuentra");
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                Con.Desconectar();
+            }
+            return dat;
+        }
+
+        public void ActulizarValorFactura(string ValorFactura, string CodigoFactura)
+        {
+            try
+            {
+                Con.Conectar();
+                string sql = "UPDATE Factura SET Fac_ValorTotal = @TotalFactura WHERE Fac_Number = @CodigoFactura";
+                SqlCommand cmd = new SqlCommand(sql, Con.Conex());
+                cmd.Parameters.AddWithValue("@TotalFactura", ValorFactura);
+                cmd.Parameters.AddWithValue("@CodigoFactura", CodigoFactura);
+                int result = cmd.ExecuteNonQuery();
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Factura finalizada exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo finalizar la factura. Intente mas tarde");
+                }
             }
             catch (Exception ex)
             {
