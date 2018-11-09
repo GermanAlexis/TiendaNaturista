@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.CodeFact = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Cantidad = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.AddProduc = new System.Windows.Forms.Button();
             this.TerminarFact = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             this.VendedorFac = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DetalleCarrito = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.comboBox_Cliente = new System.Windows.Forms.ComboBox();
             this.comboBoxProducto = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.GeneraFac = new System.Windows.Forms.Button();
             this.comboBoxVendedor = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,13 +59,13 @@
             this.CodeFact.Size = new System.Drawing.Size(148, 25);
             this.CodeFact.TabIndex = 0;
             // 
-            // textBox4
+            // Cantidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(121, 353);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(235, 25);
-            this.textBox4.TabIndex = 3;
+            this.Cantidad.Location = new System.Drawing.Point(121, 353);
+            this.Cantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Size = new System.Drawing.Size(235, 25);
+            this.Cantidad.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
@@ -91,6 +91,7 @@
             this.AddProduc.TabIndex = 5;
             this.AddProduc.Text = "Agregar Producto";
             this.AddProduc.UseVisualStyleBackColor = false;
+            this.AddProduc.Click += new System.EventHandler(this.AddProduc_Click);
             // 
             // TerminarFact
             // 
@@ -161,14 +162,14 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Valor Total";
             // 
-            // dataGridView1
+            // DetalleCarrito
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(444, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(355, 181);
-            this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.TabStop = false;
+            this.DetalleCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleCarrito.Location = new System.Drawing.Point(444, 46);
+            this.DetalleCarrito.Name = "DetalleCarrito";
+            this.DetalleCarrito.Size = new System.Drawing.Size(355, 181);
+            this.DetalleCarrito.TabIndex = 17;
+            this.DetalleCarrito.TabStop = false;
             // 
             // dataGridView2
             // 
@@ -253,7 +254,7 @@
             this.Controls.Add(this.comboBoxProducto);
             this.Controls.Add(this.comboBox_Cliente);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DetalleCarrito);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.VendedorFac);
@@ -262,7 +263,7 @@
             this.Controls.Add(this.TerminarFact);
             this.Controls.Add(this.AddProduc);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Cantidad);
             this.Controls.Add(this.CodeFact);
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -271,7 +272,7 @@
             this.MinimizeBox = false;
             this.Name = "Factura";
             this.Text = "Factura";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,7 +282,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox CodeFact;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Cantidad;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button AddProduc;
         private System.Windows.Forms.Button TerminarFact;
@@ -290,7 +291,7 @@
         private System.Windows.Forms.Label VendedorFac;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DetalleCarrito;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ComboBox comboBox_Cliente;
         private System.Windows.Forms.ComboBox comboBoxProducto;
