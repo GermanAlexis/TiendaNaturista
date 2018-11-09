@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,6 @@ namespace TiendaNaturista
             LF.LlenarClientes(comboBox_Cliente);
             LF.LlenarProductos(comboBoxProducto);
             LF.LlenarVendedor(comboBoxVendedor);
-            LF.MostrarCarritoFactura(this.DetalleCarrito, CodeFact.Text);
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -41,11 +41,32 @@ namespace TiendaNaturista
 
         private void AddProduc_Click(object sender, EventArgs e)
         {
+            string[] vector = new string[1];
             string Codigo = CodeFact.Text;
             string Producto = comboBoxProducto.SelectedItem.ToString();
             string CantidadPro = Cantidad.Text;
-            LF.LlenarDetallefactura(Codigo, Producto, CantidadPro);
-            LF.MostrarCarritoFactura(this.DetalleCarrito, CodeFact.Text);
+
+            vector = LF.ValorProducto(int.Parse(CodeFact.Text));
+
+            float subtotal = float.Parse(vector[0]) * float.Parse(CantidadPro);
+
+            LF.LlenarDetallefactura(Codigo, Producto, CantidadPro, subtotal.ToString());
+
+            LF.MostrarCarritoFactura(this.DetalleCarrito, int.Parse(CodeFact.Text));
+
+            double total = 0;
+
+            foreach (DataGridViewRow row in DetalleCarrito.Rows)
+            {
+                total += Convert.ToDouble(row.Cells["DFac_Subtotal"].Value);
+            }
+
+            ValorTotalFactura.Text = Convert.ToString(total);
+        }
+
+        private void TerminarFact_Click(object sender, EventArgs e)
+        {
+            LF.ActulizarValorFactura(ValorTotalFactura.Text, CodeFact.Text);
         }
     }
 }
